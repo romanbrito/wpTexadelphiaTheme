@@ -1,0 +1,77 @@
+.custom-logo-link {
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* small screen */
+    @media screen and (max-width: 767px) {
+      max-width: 200px;
+    }
+
+
+  /* medium screen */
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+      max-width: 500px;
+    }
+
+
+  /* large screen */
+    @media screen and (min-width: 1024px) and (max-width: 1079px){
+      max-width: 700px;
+    }
+
+}
+
+.item {
+  .small-screen, .medium-screen, .large-screen, .extra-large-screen{
+    display: none;
+  }
+
+  .small-screen {
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  .medium-screen {
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+      display: block;
+    }
+  }
+
+  .large-screen {
+    @media screen and (min-width: 1024px) and (max-width: 1079px){
+      display: block;
+    }
+  }
+
+  .extra-large-screen {
+    @media screen and (min-width: 1080px) {
+      display: block;
+    }
+  }
+
+}
+
+
+/*instagramAPI script*/
+.instagram-pic {
+  padding: 0;
+  margin: 0;
+}
+
+.instagram-bkg {
+  background: $color__background-bar;
+  padding: .3em 1em .3em 1em;
+}
+
+.instagram-logo {
+
+}
+
+a:focus {
+  outline: none;
+}

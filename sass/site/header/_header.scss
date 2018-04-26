@@ -1,0 +1,277 @@
+//slider
+.slider-caption {
+  position: absolute;
+  //right: 15%;
+  bottom: 20px;
+  left: 5%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+}
+
+.red-bar {
+  background: $color__background-bar;
+  height: 4vh;
+
+  padding-left: 2em;
+
+  a {
+    margin-right: 2em;
+    font-size: 1.5em;
+    color: #FFFFFF;
+  }
+}
+
+.our-title {
+  text-align: center;
+}
+
+.our-text {
+  position: relative;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  /*padding-left: 2vw;*/
+  p {
+    margin: 0;
+  }
+
+  .small-screen, .medium-screen, .large-screen, .extra-large-screen, .desktop {
+    display: none;
+  }
+
+  .small-screen {
+    @media screen and (max-width: 360px) {
+      display: inline-block;
+    }
+  }
+
+  .medium-screen {
+    @media screen and (min-width: 361px) and (max-width: 500px) {
+      display: inline-block;
+    }
+  }
+
+  .large-screen {
+    @media screen and (min-width: 501px) and (max-width: 600px) {
+      display: inline-block;
+    }
+  }
+
+  .extra-large-screen {
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .desktop {
+    @media screen and (min-width: 1024px) {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+
+}
+
+.text-box {
+  position: absolute;
+  opacity: 0.9;
+  top: 1em;
+  h3 {
+    margin-top: 0;
+  }
+}
+
+/* small screen */
+@media screen and (max-width: 360px) {
+
+  .slider-caption {
+    bottom: -2em;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .red-bar {
+    text-align: center;
+
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .our-title {
+    font-size: 3vh;
+  }
+
+  .text-box {
+    h3 {
+      font-size: 121%;
+      font-weight: 700;
+    }
+    p {
+      font-size: 90%;
+    }
+  }
+}
+
+/* medium screen */
+@media screen and (min-width: 361px) and (max-width: 400px) {
+
+  .slider-caption {
+    bottom: -2.5em;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .red-bar {
+    text-align: center;
+
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .our-title {
+    font-size: 3vh;
+  }
+
+  .text-box {
+    h3 {
+      font-size: 121%;
+      font-weight: 700;
+    }
+    p {
+      font-size: 69%;
+    }
+  }
+}
+
+/* large screen */
+@media screen and (min-width: 400px) and (max-width: 600px) {
+  .slider-caption {
+    bottom: -2.5em;
+  }
+
+  .carousel-indicators {
+    display: none;
+  }
+
+  .red-bar {
+    text-align: center;
+
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .our-title {
+    font-size: 3.5vh;
+  }
+
+  .text-box {
+    h3 {
+      font-size: 121%;
+      font-weight: 700;
+    }
+    p {
+      font-size: 78%;
+    }
+  }
+}
+
+/* extra large screen */
+@media screen and (min-width: 601px) and (max-width: 1020px) {
+
+  .red-bar {
+    a {
+      font-size: 1.2em;
+    }
+  }
+
+  .our-title {
+    font-size: 4vh;
+  }
+
+  .text-box {
+    h3 {
+      font-size: 150%;
+      font-weight: 700;
+    }
+    p {
+      font-size: 92%;
+    }
+  }
+}
+/* desktop */
+@media screen and (min-width: 1021px) and (max-width: 1199px) {
+  .our-text {
+    overflow-y: auto;
+    background: #e4e9f5;
+    background-image: url("./images/ourStory.png");
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .our-title {
+    font-size: 4em;
+  }
+  .text-box {
+    padding-left: 4vh;
+    h3 {
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+/* large screen bootstrap */
+@media screen and (min-width: 1200px) {
+  .our-text {
+    overflow-y: auto;
+    background: #e4e9f5;
+    background-image: url("./images/ourStory.png");
+    min-height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .our-title {
+    font-size: 4em;
+  }
+  .text-box {
+    padding-left: 4vh;
+    h3 {
+      font-size: 2.5em;
+      font-weight: 700;
+    }
+    p {
+      font-size: 20px;
+    }
+  }
+}
+//end slider
+
+//our story
+
+.grey-bar {
+  background: $color__background-hr;
+  height: 1vh;
+}
+
+.blank-bar {
+  height: 5vh;
+}
+
+//end our story
+

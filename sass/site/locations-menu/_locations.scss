@@ -1,0 +1,149 @@
+.entry-title {
+  text-align: center;
+}
+
+//google map style
+//  /* Always set the map height explicitly to define the size of the div
+//   * element that contains the map. */
+#map {
+  height: 71vh;
+}
+
+.search-location {
+  height: 60vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/*Insert this style in your css*/
+.fontAwesome {
+  font-family: 'FontAwesome', Helvetica, sans-serif;
+}
+
+.input-search {
+  border-radius: 7pt;
+  text-align: left;
+  width: 100%;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2pt $color__background-bar;
+  }
+}
+
+#search-area {
+  margin: 1em auto 0;
+}
+
+.searchresults {
+  list-style: none;
+  padding: 0;
+
+  .main-location {
+    border-bottom: solid lightgray;
+    margin: 1em 0;
+    padding: 0 0 1em;
+  }
+  h4 {
+    color: $color__background-bar;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.7em;
+  }
+  p {
+    margin: 0;
+    font-size: .7em;
+  }
+  a {
+    font-size: .8em;
+  }
+  a:visited {
+    color: white;
+  }
+  .btn-default {
+    color: $color__background-bar;
+    border: solid $color__background-bar 1px;
+  }
+  .btn {
+    margin-top: 7px;
+  }
+}
+
+.location-buttons {
+  .btn-danger {
+    display: block;
+    background: $color__background-bar;
+  }
+
+  padding-right: 1em;
+}
+
+.location-info {
+  padding-right: 1em;
+  text-align: left;
+}
+
+//modals
+.location-modal {
+  i.fa.fa-print {
+    float: right;
+    padding-right: 2em;
+  }
+
+  .large-screen-locations, .smaller-screen-locations {
+    display: none;
+  }
+
+  @media screen and (max-width: 766px) {
+
+    .smaller-screen-locations {
+      display: block;
+    }
+
+  }
+
+  @media screen and (min-width: 767px) {
+
+    .large-screen-locations {
+      display: block;
+    }
+
+  }
+
+
+}
+
+.modal-lg {
+
+  @media screen and (min-width: 768px) {
+    width: 90vw;
+
+    object {
+      height: 77vh;
+    }
+
+  }
+
+  a.right.carousel-control, a.left.carousel-control {
+    background-image: none;
+    opacity: 1;
+    width: 20px;
+  }
+
+  i.fa.fa-print, button.close {
+    font-size: 2em;
+  }
+
+}
+
+//.section-full {
+//  height:100vh;
+//  min-height:100vh;
+//
+//}
+
+///* Optional: Makes the sample page fill the window. */
+//aside#secondary,.textwidget, .custom-html-widget#secondary,#post-1748,#main,#primary,#content,#page,body,#custom_html-10,html {
+//height: 100%;
+//margin: 0;
+//padding: 0;
+//}

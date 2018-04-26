@@ -1,0 +1,41 @@
+.franchising-text {
+
+  ul {
+    list-style: none;
+  }
+
+  h1, h2 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .tex-star {
+    background-image: url("/wp-content/themes/texsite/images/TexStarTrans.png");
+    background-repeat: no-repeat;
+
+    /* small screen */
+    @media screen and (max-width: 360px) {
+      background-size: 9%;
+      padding-left: 9%;
+    }
+    /* medium screen */
+    @media screen and (min-width: 361px) and (max-width: 500px) {
+      background-size: 7%;
+      padding-left: 7%;
+    }
+    /* large screen */
+    @media screen and (min-width: 501px) and (max-width: 991px) {
+      background-size: 3%;
+      padding-left: 3.5%;
+    }
+    /* extra large screen */
+    @media screen and (min-width: 992px) {
+      background-size: 2%;
+      padding-left: 2.5%;
+    }
+
+  }
+}
