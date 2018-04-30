@@ -30,6 +30,8 @@
             ?>
         </nav>
 
+        <?php get_sidebar('footer'); ?>
+
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
