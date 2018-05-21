@@ -231,8 +231,13 @@ function texsite_scripts()
 
     // location map scripts
     if (!is_page('we-cater') or !is_page('contact-us') or !is_page('franchising') or !is_page('texnation-loyalty-program') or !is_page('about-us')) :
-        wp_enqueue_script('last-jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), null, true);
-        wp_enqueue_script('googleMaps', get_template_directory_uri() . '/locations.js', array(), 10202017, true);
+        // wp_enqueue_script('last-jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), null, true);
+        // wp_enqueue_script('googleMaps', get_template_directory_uri() . '/locations.js', array(), 10202017, true);
+
+        wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+        wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
+        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.9de63c3a.css');
+        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.c308d40a.js', array(), '05212018', true);
     endif; // End locations page
     //
 
