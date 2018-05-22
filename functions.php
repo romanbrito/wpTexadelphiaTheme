@@ -235,10 +235,9 @@ function texsite_scripts()
     or is_page('mcallen') or is_page('houston-westheimer') or is_page('denton')):
         wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
         wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
-        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.65cc7510.css');
-        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.790b8c5b.js', array(), '05212018', true);
+        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.71f2cbdb.css');
+        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.874b252b.js', array(), '05212018', true);
     endif; // End locations page
-    //
 
     // instagram
     if (is_front_page()) :
