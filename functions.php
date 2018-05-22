@@ -230,14 +230,13 @@ function texsite_scripts()
     wp_enqueue_script('texsite-navigation', get_template_directory_uri() . '/all.js', array('jquery'), '20170804', true);
 
     // location map scripts
-    if (!is_page('we-cater') or !is_page('contact-us') or !is_page('franchising') or !is_page('texnation-loyalty-program') or !is_page('about-us')) :
-        // wp_enqueue_script('last-jquery', 'https://code.jquery.com/jquery-3.2.1.min.js', array(), null, true);
-        // wp_enqueue_script('googleMaps', get_template_directory_uri() . '/locations.js', array(), 10202017, true);
-
+    if (is_page('locations-menu') or is_page('lakeline') or is_page('sunset') or is_page('frisco-warren-pkwy')or is_page('las-colinas')
+    or is_page('old-town') or is_page('plano') or is_page('richardson') or is_page('arlington-uta-campus') or is_page('okc') or is_page('laredo')
+    or is_page('mcallen') or is_page('houston-westheimer') or is_page('denton')):
         wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
         wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
-        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.9de63c3a.css');
-        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.c308d40a.js', array(), '05212018', true);
+        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.65cc7510.css');
+        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.790b8c5b.js', array(), '05212018', true);
     endif; // End locations page
     //
 

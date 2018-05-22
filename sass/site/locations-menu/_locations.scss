@@ -7,6 +7,7 @@
 //   * element that contains the map. */
 #map {
   height: 71vh;
+  padding: 0;
 }
 
 .search-location {
@@ -60,8 +61,6 @@
     color: white;
   }
   .btn-default {
-    color: $color__background-bar;
-    border: solid $color__background-bar 1px;
   }
   .btn {
     margin-top: 7px;
@@ -69,12 +68,8 @@
 }
 
 .location-buttons {
-  .btn-danger {
-    display: block;
-    background: $color__background-bar;
-  }
-
   padding-right: 1em;
+  padding-left: 20px;
 }
 
 .location-info {

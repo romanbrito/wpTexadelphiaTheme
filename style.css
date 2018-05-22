@@ -1104,6 +1104,7 @@ a:focus {
 
 #map {
 	height: 71vh;
+	padding: 0;
 }
 
 .search-location {
@@ -1163,22 +1164,13 @@ a:focus {
 	color: white;
 }
 
-.searchresults .btn-default {
-	color: #c80000;
-	border: solid #c80000 1px;
-}
-
 .searchresults .btn {
 	margin-top: 7px;
 }
 
 .location-buttons {
 	padding-right: 1em;
-}
-
-.location-buttons .btn-danger {
-	display: block;
-	background: #c80000;
+	padding-left: 20px;
 }
 
 .location-info {
@@ -1277,8 +1269,7 @@ a:focus {
 	/*opacity: 0.3;*/
 	top: 50%;
 	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 	padding-left: 6em;
 	padding-right: 6em;
 	background: rgba(0, 0, 0, 0.5);
@@ -1810,4 +1801,4 @@ object {
 	display: block;
 }
 
-/*# sourceMappingURL=../texsite/sass/maps/style.css.map */
+/*# sourceMappingURL=maps/style.css.map */
