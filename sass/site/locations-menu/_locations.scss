@@ -76,6 +76,14 @@
   padding-right: 1em;
   text-align: left;
 }
+//modal width
+@media screen and (min-width: 768px) {
+  .modal-dialog {
+    width: 70%;
+    margin: 30px auto;
+  }
+}
+
 
 //modals
 .location-modal {

@@ -1178,6 +1178,13 @@ a:focus {
 	text-align: left;
 }
 
+@media screen and (min-width: 768px) {
+	.modal-dialog {
+		width: 70%;
+		margin: 30px auto;
+	}
+}
+
 .location-modal i.fa.fa-print {
 	float: right;
 	padding-right: 2em;
