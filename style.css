@@ -1059,6 +1059,12 @@ a:focus {
 	display: inline-block;
 }
 
+@media screen and (max-width: 767px) {
+	.copyright {
+		display: none;
+	}
+}
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
