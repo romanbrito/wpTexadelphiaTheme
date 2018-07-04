@@ -236,7 +236,7 @@ function texsite_scripts()
         wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
         wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
         wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.71f2cbdb.css');
-        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.1b896b7b.js', array(), '05212018', true);
+        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.8454f291.js', array(), '05212018', true);
     endif; // End locations page
 
     // instagram
