@@ -231,6 +231,7 @@ function texsite_scripts()
 
     // location map scripts
     // update when adding a new location so script will load for the specific location
+    // also add page in wordpress
     if (is_page('locations-menu') or is_page('lakeline') or is_page('sunset') or is_page('frisco-warren-pkwy')or is_page('las-colinas')
     or is_page('old-town') or is_page('plano') or is_page('richardson') or is_page('arlington-uta-campus') or is_page('okc') or is_page('laredo')
     or is_page('mcallen') or is_page('houston-westheimer') or is_page('houston-montrose') or is_page('denton')):
