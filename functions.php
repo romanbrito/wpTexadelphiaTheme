@@ -234,7 +234,7 @@ function texsite_scripts()
     // also add page in wordpress
     if (is_page('locations-menu') or is_page('lakeline') or is_page('sunset') or is_page('frisco-warren-pkwy')or is_page('las-colinas')
     or is_page('old-town') or is_page('plano') or is_page('richardson') or is_page('arlington-uta-campus') or is_page('okc') or is_page('laredo')
-    or is_page('mcallen') or is_page('houston-westheimer') or is_page('houston-montrose') or is_page('denton')):
+    or is_page('mcallen') or is_page('houston-westheimer') or is_page('houston-montrose') or is_page('denton') or is_page('galveston')):
         wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
         wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
         wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.71f2cbdb.css');
