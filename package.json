@@ -1,0 +1,25 @@
+{
+  "name": "texsite",
+  "version": "1.0.0",
+  "description": "texadelphia site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanbrito/wpTexadelphiaTheme.git"
+  },
+  "author": "Roman Brito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/romanbrito/wpTexadelphiaTheme/issues"
+  },
+  "homepage": "https://github.com/romanbrito/wpTexadelphiaTheme#readme",
+  "dependencies": {
+    "node-sass": "^4.9.3"
+  },
+  "scripts": {
+    "sass": "node-sass --include-path scss sass/style.scss -o ./"
+  }
+}

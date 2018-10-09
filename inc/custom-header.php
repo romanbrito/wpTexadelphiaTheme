@@ -8,33 +8,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Texsite
+ * @package texsite01
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses texsite_header_style()
+ * @uses texadelphia_header_style()
  */
-function texsite_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'texsite_custom_header_args', array(
+function texadelphia_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'texadelphia_custom_header_args', array(
 		'default-image'          => '',
-		'default-text-color'     => 'ffffff',
-		'width'                  => 1920,
-		'height'                 => 800,
+		'default-text-color'     => '000000',
+		'width'                  => 1000,
+		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'texsite_header_style',
+		'wp-head-callback'       => 'texadelphia_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'texsite_custom_header_setup' );
+add_action( 'after_setup_theme', 'texadelphia_custom_header_setup' );
 
-if ( ! function_exists( 'texsite_header_style' ) ) :
+if ( ! function_exists( 'texadelphia_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see texsite_custom_header_setup().
+	 * @see texadelphia_custom_header_setup().
 	 */
-	function texsite_header_style() {
+	function texadelphia_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
@@ -51,16 +51,16 @@ if ( ! function_exists( 'texsite_header_style' ) ) :
 		<?php
 		// Has the text been hidden?
 		if ( ! display_header_text() ) :
-		?>
+			?>
 			.site-title,
 			.site-description {
 				position: absolute;
 				clip: rect(1px, 1px, 1px, 1px);
 			}
 		<?php
-			// If the user has set a custom color for the text use that.
-			else :
-		?>
+		// If the user has set a custom color for the text use that.
+		else :
+			?>
 			.site-title a,
 			.site-description {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;

@@ -1,23 +1,23 @@
 /*!
-Theme Name: Texadelphia 2017
-Theme URI: https://www.texadelphia.com
-Author: roman brito
-Author URI: http://romanbrito.pro
-Description: Texadelphia site
+Theme Name: texsite01
+Theme URI: http://underscores.me/
+Author: Roman Brito
+Author URI: https://romanbrito.pro
+Description: Texadelphia.com
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: texadelphia
-Tags: custom texadelphia site with locations, menu, contact, franchising, etc
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Texadelphia 2017 is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+texsite01 is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
 Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
@@ -85,16 +85,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 --------------------------------------------------------------*/
 @import "modules/clearings";
 
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
-
-/*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
 # Infinite scroll

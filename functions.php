@@ -1,89 +1,87 @@
 <?php
 /**
- * Texsite functions and definitions
+ * texsite01 functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Texsite
+ * @package texsite01
  */
 
-if (!function_exists('texsite_setup')) :
-    /**
-     * Sets up theme defaults and registers support for various WordPress features.
-     *
-     * Note that this function is hooked into the after_setup_theme hook, which
-     * runs before the init hook. The init hook is too late for some features, such
-     * as indicating support for post thumbnails.
-     */
-    function texsite_setup()
-    {
-        /*
-         * Make theme available for translation.
-         * Translations can be filed in the /languages/ directory.
-         * If you're building a theme based on Texsite, use a find and replace
-         * to change 'texsite' to the name of your theme in all the template files.
-         */
-        load_theme_textdomain('texsite', get_template_directory() . '/languages');
+if ( ! function_exists( 'texadelphia_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
+	 */
+	function texadelphia_setup() {
+		/*
+		 * Make theme available for translation.
+		 * Translations can be filed in the /languages/ directory.
+		 * If you're building a theme based on texsite01, use a find and replace
+		 * to change 'texadelphia' to the name of your theme in all the template files.
+		 */
+		load_theme_textdomain( 'texadelphia', get_template_directory() . '/languages' );
 
-        // Add default posts and comments RSS feed links to head.
-        add_theme_support('automatic-feed-links');
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-        /*
-         * Let WordPress manage the document title.
-         * By adding theme support, we declare that this theme does not use a
-         * hard-coded <title> tag in the document head, and expect WordPress to
-         * provide it for us.
-         */
-        add_theme_support('title-tag');
+		/*
+		 * Let WordPress manage the document title.
+		 * By adding theme support, we declare that this theme does not use a
+		 * hard-coded <title> tag in the document head, and expect WordPress to
+		 * provide it for us.
+		 */
+		add_theme_support( 'title-tag' );
 
-        /*
-         * Enable support for Post Thumbnails on posts and pages.
-         *
-         * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
-         */
-        add_theme_support('post-thumbnails');
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		 */
+		add_theme_support( 'post-thumbnails' );
 
-        // This theme uses wp_nav_menu() in one location.
-        register_nav_menus(array(
-            'menu-1' => esc_html__('Primary', 'texsite'),
-            'footer' => esc_html__('footer menu', 'texsite'),
-        ));
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus( array(
+			'menu-1' => esc_html__( 'Primary', 'texadelphia' ),
+		) );
 
-        /*
-         * Switch default core markup for search form, comment form, and comments
-         * to output valid HTML5.
-         */
-        add_theme_support('html5', array(
-            'search-form',
-            'comment-form',
-            'comment-list',
-            'gallery',
-            'caption',
-        ));
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
 
-        // Set up the WordPress core custom background feature.
-        add_theme_support('custom-background', apply_filters('texsite_custom_background_args', array(
-            'default-color' => 'ffffff',
-            'default-image' => '',
-        )));
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'texadelphia_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
 
-        // Add theme support for selective refresh for widgets.
-        add_theme_support('customize-selective-refresh-widgets');
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
 
-        /**
-         * Add support for core custom logo.
-         *
-         * @link https://codex.wordpress.org/Theme_Logo
-         */
-        add_theme_support('custom-logo', array(
-            'height' => 56,
-            'width' => 231,
-            'flex-width' => true,
-            'flex-height' => true,
-        ));
-    }
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
+		) );
+	}
 endif;
-add_action('after_setup_theme', 'texsite_setup');
+add_action( 'after_setup_theme', 'texadelphia_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -92,182 +90,47 @@ add_action('after_setup_theme', 'texsite_setup');
  *
  * @global int $content_width
  */
-function texsite_content_width()
-{
-    $GLOBALS['content_width'] = apply_filters('texsite_content_width', 640);
+function texadelphia_content_width() {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	$GLOBALS['content_width'] = apply_filters( 'texadelphia_content_width', 640 );
 }
-
-add_action('after_setup_theme', 'texsite_content_width', 0);
+add_action( 'after_setup_theme', 'texadelphia_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function texsite_widgets_init()
-{
-    register_sidebar(array(
-        'name' => esc_html__('Sidebar', 'texsite'),
-        'id' => 'sidebar-1',
-        'description' => esc_html__('Add widgets here.', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //header sidebar
-    register_sidebar(array(
-        'name' => esc_html__('header-widget', 'texsite'),
-        'id' => 'header-slider',
-        'description' => esc_html__('header slide show', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //footer sidebar
-    register_sidebar(array(
-        'name' => esc_html__('footer-widget', 'texsite'),
-        'id' => 'footer',
-        'description' => esc_html__('footer', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //front page sidebar
-    register_sidebar(array(
-        'name' => esc_html__('frontpage-widget', 'texsite'),
-        'id' => 'instagram-slider',
-        'description' => esc_html__('instagram slide show', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //locations sidebar
-    register_sidebar(array(
-        'name' => esc_html__('locations-widget', 'texsite'),
-        'id' => 'locations',
-        'description' => esc_html__('locations', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //catering sidebar
-    register_sidebar(array(
-        'name' => esc_html__('catering-widget', 'texsite'),
-        'id' => 'catering',
-        'description' => esc_html__('catering', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //About sidebar
-    register_sidebar(array(
-        'name' => esc_html__('about-widget', 'texsite'),
-        'id' => 'about',
-        'description' => esc_html__('about', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //Texnation sidebar
-    register_sidebar(array(
-        'name' => esc_html__('texnation-widget', 'texsite'),
-        'id' => 'texnation',
-        'description' => esc_html__('texnation', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
-
-    //News sidebar
-    register_sidebar(array(
-        'name' => esc_html__('news-widget', 'texsite'),
-        'id' => 'news',
-        'description' => esc_html__('news', 'texsite'),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget' => '</section>',
-        'before_title' => '<h2 class="widget-title">',
-        'after_title' => '</h2>',
-    ));
+function texadelphia_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Sidebar', 'texadelphia' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'texadelphia' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
-
-add_action('widgets_init', 'texsite_widgets_init');
-
-// adding async defer to googleMaps-api script ///////////////
-add_filter('script_loader_tag', function ($tag, $handle) {
-
-    if ('googleMaps-api' !== $handle)
-        return $tag;
-
-    return str_replace(' src', ' async defer src', $tag);
-}, 10, 2);
-
+add_action( 'widgets_init', 'texadelphia_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function texsite_scripts()
-{
-    //	bootstrap css and js
-    wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-    wp_enqueue_script('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'), '20170804', false);
-    //
+function texadelphia_scripts() {
+	wp_enqueue_style( 'texadelphia-style', get_stylesheet_uri() );
 
-    wp_enqueue_script('texsite-navigation', get_template_directory_uri() . '/all.js', array('jquery'), '20170804', true);
+	wp_enqueue_script( 'texadelphia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-    // location map scripts
-    // update when adding a new location so script will load for the specific location
-    // also add page in wordpress
-    if (is_page('locations-menu') or is_page('lakeline') or is_page('sunset') or is_page('frisco-warren-pkwy')or is_page('las-colinas')
-    or is_page('old-town') or is_page('plano') or is_page('richardson') or is_page('arlington-uta-campus') or is_page('okc') or is_page('laredo')
-    or is_page('mcallen') or is_page('houston-westheimer') or is_page('houston-montrose') or is_page('denton') or is_page('galveston')):
-        wp_enqueue_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
-        wp_enqueue_style('bootstrap-theme', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css');
-        wp_enqueue_style('googleMapsReact', get_template_directory_uri() . '/build/static/css/main.71f2cbdb.css');
-        wp_enqueue_script('googleMapsReact', get_template_directory_uri() . '/build/static/js/main.2f54a412.js', array(), '07232018', true);
-    endif; // End locations page
+	wp_enqueue_script( 'texadelphia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-    // instagram
-    if (is_front_page()) :
-        wp_enqueue_script('texsite-instagram', get_template_directory_uri() . '/front.js', array('jquery'), '20170808', true);
-    endif; // End frontpage
-    //
-
-    // Enqueue Google Fonts
-    wp_enqueue_style('texsite-fonts', 'https://fonts.googleapis.com/css?family=Catamaran|Montserrat');
-
-    // Typekit Font
-    wp_enqueue_script('typekit-mrsEaves', 'https://use.typekit.net/mgd0hnb.js');
-    wp_enqueue_script('typekit-async', get_template_directory_uri() . '/js/typekit.js');
-
-    // <script>try{Typekit.load({ async: true });}catch(e){}</script>
-    // Enqueue Font awesome
-    wp_enqueue_style('font-awesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
-
-    wp_enqueue_style('texsite-style', get_stylesheet_uri());
-
-    wp_enqueue_script('texsite-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true);
-
-    if (is_singular() && comments_open() && get_option('thread_comments')) {
-        wp_enqueue_script('comment-reply');
-    }
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
-
-add_action('wp_enqueue_scripts', 'texsite_scripts');
+add_action( 'wp_enqueue_scripts', 'texadelphia_scripts' );
 
 /**
  * Implement the Custom Header feature.
@@ -292,6 +155,7 @@ require get_template_directory() . '/inc/customizer.php';
 /**
  * Load Jetpack compatibility file.
  */
-if (defined('JETPACK__VERSION')) {
-    require get_template_directory() . '/inc/jetpack.php';
+if ( defined( 'JETPACK__VERSION' ) ) {
+	require get_template_directory() . '/inc/jetpack.php';
 }
+
