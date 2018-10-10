@@ -588,7 +588,8 @@ a {
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-  display: block; }
+  display: block;
+  cursor: pointer; }
 
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
@@ -773,6 +774,25 @@ a {
 --------------------------------------------------------------*/
 .site-main .entry-header {
   display: none; }
+
+/*--------------------------------------------------------------
+## Frontpage
+--------------------------------------------------------------*/
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+  .carousel .slide {
+    display: none; }
+  .carousel .next {
+    display: block;
+    position: absolute;
+    transform: translate(100%); }
+  .carousel .move {
+    display: block;
+    position: relative;
+    transform: translate(0);
+    transition: transform 1.5s ease-in-out; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

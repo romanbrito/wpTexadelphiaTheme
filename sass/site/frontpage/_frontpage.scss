@@ -1,0 +1,29 @@
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .slide {
+    display: none;
+  }
+
+  .next {
+    display: block;
+    position: absolute;
+    transform:translate(100%);
+    //transform:translate(0);
+    //transition: transform 5s ease-in-out;
+  }
+
+  .move {
+    display: block;
+    position: relative;
+    transform:translate(0);
+    transition: transform 1.5s ease-in-out;
+  }
+
+  .active {
+    //transform:translate(100%);
+    //transition: transform 1.5s ease-in-out;
+  }
+}

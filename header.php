@@ -45,7 +45,12 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'texadelphia' ); ?></button>
+<!--			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">--><?php //esc_html_e( 'Primary Menu', 'texadelphia' ); ?><!--</button>-->
+            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+                <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="27" width="27" viewBox="0 0 40 40" style="vertical-align: middle; color: rgb(255, 255, 255);">
+                    <g><path d="m5 10h30v3.4h-30v-3.4z m0 11.6v-3.2h30v3.2h-30z m0 8.4v-3.4h30v3.4h-30z"></path></g>
+                </svg>
+            </button>
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
