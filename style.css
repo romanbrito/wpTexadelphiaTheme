@@ -745,6 +745,18 @@ a {
   display: block; }
 
 /*--------------------------------------------------------------
+## Header / Logo and Navigation
+--------------------------------------------------------------*/
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .site-header .main-navigation {
+    width: auto; }
+  .site-header::before, .site-header::after {
+    content: none; }
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
