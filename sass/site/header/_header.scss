@@ -12,4 +12,21 @@
   &::after {
     content: none;
   }
+
+  // navigation
+  .menu-item {
+    padding: 1rem;
+
+    a {
+      color: #2d2d2d; }
+    a:visited {
+      color: #2d2d2d; }
+    a:hover, a:focus, a:active {
+      color: #8d8d8d; }
+    a:focus {
+      outline: 0; }
+    a:hover, a:active {
+      outline: 0; }
+  }
+
 }
