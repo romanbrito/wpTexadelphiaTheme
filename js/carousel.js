@@ -1,16 +1,24 @@
 (function () {
-    // let idx = 0;
-    // const FIGURE = document.querySelectorAll('.slide');
-    //
-    // function carousel() {
-    //     FIGURE[idx].classList.add('move');
-    //     FIGURE[idx + 1].classList.add('next');
-    //     idx++;
-    //     if (idx > FIGURE.length) idx = 1;
-    //     FIGURE[idx - 1].classList.add('active');
-    //     FIGURE[idx - 1].classList.remove('next');
-    //     setTimeout(carousel, 3000); // change image every 3 seconds
-    // }
 
+    const FIGURE = document.querySelectorAll('.slide');
+
+    function slideShow(idx) {
+        setTimeout(function () {
+            if (FIGURE[idx].classList.value !== 'slide move') {
+                FIGURE[idx].classList.add('move');
+            }
+
+            if (idx > 0) {
+                FIGURE[idx - 1].classList.add('next');
+            }
+
+
+        }, idx * 3000)
+    }
+
+
+    for (let i = 0; i < FIGURE.length; i++) {
+        slideShow(i)
+    }
 
 })();

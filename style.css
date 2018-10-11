@@ -780,19 +780,20 @@ a {
 --------------------------------------------------------------*/
 .carousel {
   width: 100%;
-  position: relative;
-  overflow: hidden; }
+  height: 100%;
+  position: relative; }
   .carousel .slide {
-    display: none; }
-  .carousel .next {
-    display: block;
-    position: absolute;
-    transform: translate(100%); }
+    margin: 0;
+    transition: transform 1.5s ease-in-out;
+    left: 100%;
+    position: absolute; }
   .carousel .move {
-    display: block;
     position: relative;
-    transform: translate(0);
-    transition: transform 1.5s ease-in-out; }
+    transform: translate(-100%); }
+  .carousel .next {
+    transform: translate(-200%); }
+  .carousel .hide {
+    display: none; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

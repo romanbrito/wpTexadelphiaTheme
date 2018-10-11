@@ -20,6 +20,6 @@
     "node-sass": "^4.9.3"
   },
   "scripts": {
-    "sass": "node-sass --include-path scss sass/style.scss -o ./"
+    "sass": "node-sass -w --include-path scss sass/style.scss -o ./"
   }
 }
