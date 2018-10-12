@@ -6,24 +6,40 @@
     document.querySelector('.carousel').appendChild(placeImage);
 
     const FIGURE = document.querySelectorAll('.slide');
+    const DURATION = 3000; // milliseconds
 
-    function slideShow(idx) {
+    slideShow();
+
+    function slide(idx) {
         setTimeout(function () {
-            if (FIGURE[idx].classList.value !== 'slide move') {
-                FIGURE[idx].classList.add('move');
-            }
+            FIGURE[idx].classList.add('move');
 
-            if (idx > 0) {
+            if(idx < 2) {
+                // case idx 0
+                if(idx < 1) {
+                    FIGURE[FIGURE.length -1].classList.add('next');
+                    FIGURE[FIGURE.length -2].classList.remove('move', 'next');
+                } else {
+                    // case idx 1
+                    FIGURE[idx - 1].classList.add('next');
+                    FIGURE[FIGURE.length -1].classList.remove('move', 'next');
+                }
+            } else {
+                // case > 1
                 FIGURE[idx - 1].classList.add('next');
+                FIGURE[idx - 2].classList.remove('move', 'next');
             }
-
-
-        }, idx * 3000)
+        }, idx * DURATION)
     }
 
+    function slideShow() {
+        for (let i = 0; i < FIGURE.length; i++) {
+            slide(i);
+        }
 
-    for (let i = 0; i < FIGURE.length; i++) {
-        slideShow(i)
+        setTimeout(function () {
+            slideShow();
+        }, FIGURE.length * DURATION);
     }
 
 })();
