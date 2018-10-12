@@ -1,5 +1,10 @@
 (function () {
 
+    const placeImage = document.createElement('IMG');
+    placeImage.src = "https://res.cloudinary.com/spottermart/image/upload/v1539125202/Texadelphia/founder.jpg";
+    placeImage.style.visibility = "hidden";
+    document.querySelector('.carousel').appendChild(placeImage);
+
     const FIGURE = document.querySelectorAll('.slide');
 
     function slideShow(idx) {
