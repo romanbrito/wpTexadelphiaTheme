@@ -792,6 +792,20 @@ a {
     transition: transform .6s ease-in-out; }
   .carousel .next {
     transform: translate(-200%); }
+  .carousel .slide-images {
+    width: 100%;
+    position: absolute; }
+  .carousel .chevron {
+    width: 30px;
+    color: oldlace;
+    position: absolute;
+    cursor: pointer; }
+  .carousel .chevron-right {
+    margin-top: 20%;
+    margin-left: 95%; }
+  .carousel .chevron-left {
+    margin-top: 20%;
+    margin-left: 5%; }
 
 /*--------------------------------------------------------------
 # Infinite scroll

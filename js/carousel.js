@@ -6,7 +6,7 @@
     document.querySelector('.carousel').appendChild(placeImage);
 
     const FIGURE = document.querySelectorAll('.slide');
-    const DURATION = 3000; // milliseconds
+    const DURATION = 7000; // milliseconds
 
     slideShow();
 

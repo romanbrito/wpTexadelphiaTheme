@@ -19,4 +19,24 @@
   .next {
     transform:translate(-200%);
   }
+
+  .slide-images {
+    width: 100%;
+    position: absolute;
+  }
+
+  .chevron {
+    width: 30px;
+    color: oldlace;
+    position: absolute;
+    cursor: pointer;
+  }
+  .chevron-right {
+    margin-top: 20%;
+    margin-left: 95%;
+  }
+  .chevron-left {
+    margin-top: 20%;
+    margin-left: 5%;
+  }
 }
