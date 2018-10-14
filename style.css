@@ -792,6 +792,8 @@ a {
     transition: transform .6s ease-in-out; }
   .carousel .next {
     transform: translate(-200%); }
+  .carousel .right {
+    transform: translate(0); }
   .carousel .slide-images {
     width: 100%;
     position: absolute; }
