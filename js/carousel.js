@@ -64,13 +64,17 @@
     }
 
     function slide(idx) {
+        FIGURE[idx].classList.remove('active_right','next_right');
         FIGURE[idx].classList.add('active');
+        FIGURE[normalize(idx - 1)].classList.remove('active_right');
         FIGURE[normalize(idx - 1)].classList.add('next');
         FIGURE[normalize(idx - 2)].classList.remove('active', 'next');
     }
 
     function slideRight(idx) {
+        FIGURE[idx].classList.remove('active','next');
         FIGURE[idx].classList.add('active_right');
+        FIGURE[normalize(idx + 1)].classList.remove('active');
         FIGURE[normalize(idx + 1)].classList.add('next_right');
         FIGURE[normalize(idx + 2)].classList.remove('active_right', 'next_right');
     }
