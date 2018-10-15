@@ -14,10 +14,17 @@
 
     let state = 0;
 
+    function left(cb) {
+        for (let i = 0; i < LENGTH; i++) {
+            FIGURE[i].style.left = '100%';
+            cb();
+        }
+    }
+
     for (let i = 0; i < CHEVRON_LEFT.length; i++) {
         CHEVRON_LEFT[i].addEventListener('click', function (e) {
             state < LENGTH-1 ? state+=1: state=0;
-            slide(state);
+            left(function(){slide(state)});
         });
 
     }
