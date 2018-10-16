@@ -16,14 +16,23 @@
 
     function left(cb) {
         for (let i = 0; i < LENGTH; i++) {
-            FIGURE[i].style.left = '100%';
+            if (FIGURE[i].classList.value === 'slide active_right') {
+                FIGURE[i].classList.add('active');
+            } else {
+                FIGURE[i].style.left = '100%';
+            }
         }
         cb();
     }
 
     function right(cb) {
         for (let i = 0; i < LENGTH; i++) {
-            FIGURE[i].style.left = '-100%';
+            // identify reverse
+            if (FIGURE[i].classList.value === 'slide active') {
+                FIGURE[i].classList.add('active_right');
+            } else {
+                FIGURE[i].style.left = '-100%';
+            }
         }
         cb();
     }
@@ -64,7 +73,7 @@
     }
 
     function slide(idx) {
-        FIGURE[idx].classList.remove('active_right','next_right');
+        FIGURE[idx].classList.remove('active_right', 'next_right');
         FIGURE[idx].classList.add('active');
         FIGURE[normalize(idx - 1)].classList.remove('active_right');
         FIGURE[normalize(idx - 1)].classList.add('next');
@@ -72,7 +81,7 @@
     }
 
     function slideRight(idx) {
-        FIGURE[idx].classList.remove('active','next');
+        FIGURE[idx].classList.remove('active', 'next');
         FIGURE[idx].classList.add('active_right');
         FIGURE[normalize(idx + 1)].classList.remove('active');
         FIGURE[normalize(idx + 1)].classList.add('next_right');
