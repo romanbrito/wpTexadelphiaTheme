@@ -1,0 +1,103 @@
+.carousel {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .slide {
+    margin: 0;
+    position: absolute;
+    width: 100%;
+    display: none;
+  }
+
+  .chevron {
+    width: 30px;
+    color: oldlace;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  .chevron-right {
+    margin-top: 20%;
+    margin-left: 95%;
+  }
+
+  .chevron-left {
+    margin-top: 20%;
+    margin-left: 5%;
+  }
+
+  .slide-images {
+    width: 100%;
+    position: absolute;
+  }
+
+  .start-figure {
+    display: block;
+  }
+
+  .slide-left-in {
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: slide-left-in 0.4s
+  }
+
+  @keyframes slide-left-in {
+    from {
+      left: 100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .slide-left-out {
+    display: block;
+    position: relative;
+    z-index: 0;
+    animation: slide-left-out 0.4s
+  }
+
+  @keyframes slide-left-out {
+    from {
+      left: 0;
+    }
+    to {
+      left: -100%;
+    }
+  }
+
+  .slide-right-in {
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: slide-right-in 0.4s
+  }
+
+  @keyframes slide-right-in {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0;
+    }
+  }
+
+  .slide-right-out {
+    display: block;
+    position: relative;
+    z-index: 0;
+    animation: slide-right-out 0.4s
+  }
+
+  @keyframes slide-right-out {
+    from {
+      left: 0;
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+}

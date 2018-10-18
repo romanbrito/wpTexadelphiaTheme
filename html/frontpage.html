@@ -16,8 +16,7 @@
         margin: 0;
         position: absolute;
         width: 100%;
-        /*display: none;*/
-        left: 100%;
+        display: none;
     }
 
     .chevron {
@@ -42,81 +41,80 @@
         position: absolute;
     }
 
-    .slide-in {
+    .start-figure {
         display: block;
-        animation-name: slide-in;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        /*animation-timing-function: linear;*/
-        /*animation-iteration-count: infinite;*/
-        /*animation-direction: alternate;*/
     }
 
-    .slide-out {
+    .slide-left-in {
         display: block;
-        animation-name: slide-out;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        /*animation-timing-function: ease-in;*/
+        position: relative;
+        z-index: 1;
+        animation: slide-left-in 0.4s
     }
 
-    .slide-next {
+    @keyframes slide-left-in {
+        from {
+            left: 100%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+    .slide-left-out {
         display: block;
-        animation-name: slide-next;
-        animation-duration: 3s;
-        animation-fill-mode: forwards;
-        /*animation-timing-function: linear;*/
+        position: relative;
+        z-index: 0;
+        animation: slide-left-out 0.4s
     }
 
-    .slide-reverse {
+    @keyframes slide-left-out {
+        from {
+            left: 0;
+        }
+        to {
+            left: -100%;
+        }
+    }
+
+    .slide-right-in {
         display: block;
-        animation-name: slide-reverse;
-        animation-duration: 1.1s;
-        animation-fill-mode: forwards;
-        /*animation-timing-function: cubic-bezier(.5, .7, 1, 1);*/
+        position: relative;
+        z-index: 1;
+        animation: slide-right-in 0.4s
     }
 
-    @keyframes slide-reverse {
-        0% {
-            transform: translateX(-200%)
+    @keyframes slide-right-in {
+        from {
+            left: -100%;
         }
-        100% {
-            transform: translateX(-100%)
-        }
-    }
-
-    @keyframes slide-next {
-        0% {
-            transform: translateX(-100%)
-        }
-        100% {
-            transform: translateX(-200%)
+        to {
+            left: 0;
         }
     }
 
-    @keyframes slide-in {
-        0% {
-            transform: translateX(-100%)
+    .slide-right-out {
+        display: block;
+        position: relative;
+        z-index: 0;
+        animation: slide-right-out 0.4s
+    }
+
+    @keyframes slide-right-out {
+        from {
+            left: 0;
         }
-        100% {
-            transform: translateX(100%)
+        to {
+            left: 100%;
         }
     }
 
-    @keyframes slide-out {
-        0% {
-            transform: translateX(0%)
-        }
-        100% {
-            transform: translateX(-100%)
-        }
-    }
 </style>
 <body>
 
 <section class="carousel">
     <div class="carousel-container">
-        <figure class="slide" data-index-number="0">
+        <figure class="slide start-figure" data-index-number="0">
             <img class="slide-images"
                  src="https://res.cloudinary.com/spottermart/image/upload/v1539125202/Texadelphia/founder.jpg"
                  alt="Texadelphia Founders Favorite">
@@ -166,19 +164,18 @@
 
 <script>
     (function () {
-
+        // setting a copy of an image as placeholder
         const placeImage = document.createElement('IMG');
-        placeImage.src = "https://res.cloudinary.com/spottermart/image/upload/v1539125202/Texadelphia/founder.jpg";
+        placeImage.src = document.querySelector('.slide-images').getAttribute('src');
         placeImage.style.visibility = "hidden";
         document.querySelector('.carousel').appendChild(placeImage);
 
+        // getting elements and chevrons
         const FIGURE = document.querySelectorAll('.slide');
         const LENGTH = FIGURE.length;
         const CHEVRON_LEFT = document.querySelectorAll('.chevron-left');
         const CHEVRON_RIGHT = document.querySelectorAll('.chevron-right');
         const DURATION = 3000; // milliseconds
-
-        slide(1, 0);
 
         // Returns the correct index to avoid negative or above last index
         function normalize(idx) {
@@ -187,37 +184,34 @@
             return idx;
         }
 
-
+        // event listener, listen for left or right clicks
         for (let i = 0; i < CHEVRON_LEFT.length; i++) {
+            // left chevron click event
             CHEVRON_LEFT[i].addEventListener('click', function (e) {
-                console.log('chevron left');
                 const idx = parseInt(e.currentTarget.parentNode.getAttribute('data-index-number'));
                 slide(1, idx);
             });
-
-        }
-
-        for (let i = 0; i < CHEVRON_RIGHT.length; i++) {
+            // right chevron click event (same number of left and right chevrons)
             CHEVRON_RIGHT[i].addEventListener('click', function (e) {
-                console.log('chevron right');
                 const idx = parseInt(e.currentTarget.parentNode.getAttribute('data-index-number'));
                 slide(-1, idx);
             });
         }
 
-        // slideShow();
-
+        // function that takes care of the sliding one slide at a time
         function slide(i, idx) {
+            // removing all classes, just keeping slide (reset)
+            for (let i = 0; i < LENGTH; i++) {
+                FIGURE[i].classList = 'slide';
+            }
+            // slide right case
             if (i < 0) {
-                FIGURE[normalize(idx + i)].classList.add('slide-reverse');
-                FIGURE[idx].classList.remove('slide-out');
-                FIGURE[idx].classList.add('slide-in');
-                // FIGURE[normalize(idx + i + i)].style.display = 'none';
+                FIGURE[idx].classList.add('slide-right-out');
+                FIGURE[normalize(idx + i)].classList.add('slide-right-in');
             } else {
-                console.log(idx + i);
-                FIGURE[idx].classList.add('slide-next');
-                FIGURE[normalize(idx + i)].classList.add('slide-out');
-                FIGURE[normalize(idx + i + i)].classList.remove('slide-out', 'slide-next');
+                // slide left case
+                FIGURE[idx].classList.add('slide-left-out');
+                FIGURE[normalize(idx + i)].classList.add('slide-left-in');
             }
         }
 

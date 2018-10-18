@@ -776,7 +776,7 @@ a {
   display: none; }
 
 /*--------------------------------------------------------------
-## Frontpage
+## SlideShow in Frontpage
 --------------------------------------------------------------*/
 .carousel {
   width: 100%;
@@ -785,20 +785,8 @@ a {
   .carousel .slide {
     margin: 0;
     position: absolute;
-    width: 100%; }
-  .carousel .active {
-    transform: translate(-100%);
-    transition: transform .6s ease-in-out; }
-  .carousel .next {
-    transform: translate(-200%); }
-  .carousel .active_right {
-    transform: translate(100%);
-    transition: transform .6s ease-in-out; }
-  .carousel .next_right {
-    transform: translate(200%); }
-  .carousel .slide-images {
     width: 100%;
-    position: absolute; }
+    display: none; }
   .carousel .chevron {
     width: 30px;
     color: oldlace;
@@ -810,6 +798,55 @@ a {
   .carousel .chevron-left {
     margin-top: 20%;
     margin-left: 5%; }
+  .carousel .slide-images {
+    width: 100%;
+    position: absolute; }
+  .carousel .start-figure {
+    display: block; }
+  .carousel .slide-left-in {
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: slide-left-in 0.4s; }
+
+@keyframes slide-left-in {
+  from {
+    left: 100%; }
+  to {
+    left: 0; } }
+  .carousel .slide-left-out {
+    display: block;
+    position: relative;
+    z-index: 0;
+    animation: slide-left-out 0.4s; }
+
+@keyframes slide-left-out {
+  from {
+    left: 0; }
+  to {
+    left: -100%; } }
+  .carousel .slide-right-in {
+    display: block;
+    position: relative;
+    z-index: 1;
+    animation: slide-right-in 0.4s; }
+
+@keyframes slide-right-in {
+  from {
+    left: -100%; }
+  to {
+    left: 0; } }
+  .carousel .slide-right-out {
+    display: block;
+    position: relative;
+    z-index: 0;
+    animation: slide-right-out 0.4s; }
+
+@keyframes slide-right-out {
+  from {
+    left: 0; }
+  to {
+    left: 100%; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
