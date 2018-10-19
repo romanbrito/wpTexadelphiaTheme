@@ -7,24 +7,8 @@
     margin: 0;
     position: absolute;
     width: 100%;
+    height: 100%;
     display: none;
-  }
-
-  .chevron {
-    width: 30px;
-    color: oldlace;
-    position: absolute;
-    cursor: pointer;
-  }
-
-  .chevron-right {
-    margin-top: 20%;
-    margin-left: 95%;
-  }
-
-  .chevron-left {
-    margin-top: 20%;
-    margin-left: 5%;
   }
 
   .slide-images {
@@ -32,13 +16,55 @@
     position: absolute;
   }
 
+  figcaption {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    h3 {
+      z-index: 1;
+      color: antiquewhite;
+      margin: 0 1em 1em 0;
+    }
+  }
+
   .start-figure {
     display: block;
   }
 
+  .chevron-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chevron {
+    width: 30px;
+    color: oldlace;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .chevron-right {
+    margin-right: 1em;
+  }
+
+  .chevron-left {
+    margin-left: 1em;
+  }
+
+  /*slideShow animation*/
+
   .slide-left-in {
     display: block;
-    position: relative;
+    /*position: relative;*/
     z-index: 1;
     animation: slide-left-in 0.4s
   }
@@ -54,7 +80,7 @@
 
   .slide-left-out {
     display: block;
-    position: relative;
+    /*position: relative;*/
     z-index: 0;
     animation: slide-left-out 0.4s
   }
@@ -70,7 +96,7 @@
 
   .slide-right-in {
     display: block;
-    position: relative;
+    /*position: relative;*/
     z-index: 1;
     animation: slide-right-in 0.4s
   }
@@ -86,7 +112,7 @@
 
   .slide-right-out {
     display: block;
-    position: relative;
+    /*position: relative;*/
     z-index: 0;
     animation: slide-right-out 0.4s
   }

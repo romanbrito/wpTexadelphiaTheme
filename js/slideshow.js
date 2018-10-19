@@ -33,6 +33,7 @@
             // stop automatic slideShow
             clearTimeout(timeOutVarStart);
             clearTimeout(timeOutVar);
+            console.log('chevron left');
             slideShow(1);
         });
         // right chevron click event (same number of left and right chevrons)
