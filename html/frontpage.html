@@ -177,6 +177,8 @@
         const CHEVRON_RIGHT = document.querySelectorAll('.chevron-right');
         const DURATION = 3000; // milliseconds
 
+        let state = 0;
+
         // Returns the correct index to avoid negative or above last index
         function normalize(idx) {
             if (idx < 0) return LENGTH + idx;
@@ -188,31 +190,32 @@
         for (let i = 0; i < CHEVRON_LEFT.length; i++) {
             // left chevron click event
             CHEVRON_LEFT[i].addEventListener('click', function (e) {
-                const idx = parseInt(e.currentTarget.parentNode.getAttribute('data-index-number'));
-                slide(1, idx);
+                slide(1);
             });
             // right chevron click event (same number of left and right chevrons)
             CHEVRON_RIGHT[i].addEventListener('click', function (e) {
-                const idx = parseInt(e.currentTarget.parentNode.getAttribute('data-index-number'));
-                slide(-1, idx);
+                slide(-1);
             });
         }
 
         // function that takes care of the sliding one slide at a time
-        function slide(i, idx) {
+        function slide(i) {
             // removing all classes, just keeping slide (reset)
             for (let i = 0; i < LENGTH; i++) {
                 FIGURE[i].classList = 'slide';
             }
             // slide right case
             if (i < 0) {
-                FIGURE[idx].classList.add('slide-right-out');
-                FIGURE[normalize(idx + i)].classList.add('slide-right-in');
+                FIGURE[state].classList.add('slide-right-out');
+                FIGURE[normalize(state + i)].classList.add('slide-right-in');
             } else {
                 // slide left case
-                FIGURE[idx].classList.add('slide-left-out');
-                FIGURE[normalize(idx + i)].classList.add('slide-left-in');
+                FIGURE[state].classList.add('slide-left-out');
+                FIGURE[normalize(state + i)].classList.add('slide-left-in');
             }
+
+            // current slide
+            state = normalize(state + i);
         }
 
     })();
