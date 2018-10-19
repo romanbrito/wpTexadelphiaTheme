@@ -781,8 +781,7 @@ a {
 .carousel {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  /*slideShow animation*/ }
+  overflow: hidden; }
   .carousel .slide {
     margin: 0;
     position: absolute;
@@ -824,7 +823,6 @@ a {
     margin-left: 1em; }
   .carousel .slide-left-in {
     display: block;
-    /*position: relative;*/
     z-index: 1;
     animation: slide-left-in 0.4s; }
 
@@ -835,7 +833,6 @@ a {
     left: 0; } }
   .carousel .slide-left-out {
     display: block;
-    /*position: relative;*/
     z-index: 0;
     animation: slide-left-out 0.4s; }
 
@@ -846,7 +843,6 @@ a {
     left: -100%; } }
   .carousel .slide-right-in {
     display: block;
-    /*position: relative;*/
     z-index: 1;
     animation: slide-right-in 0.4s; }
 
@@ -857,7 +853,6 @@ a {
     left: 0; } }
   .carousel .slide-right-out {
     display: block;
-    /*position: relative;*/
     z-index: 0;
     animation: slide-right-out 0.4s; }
 

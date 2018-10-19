@@ -60,11 +60,10 @@
     margin-left: 1em;
   }
 
-  /*slideShow animation*/
+  //slideShow animation
 
   .slide-left-in {
     display: block;
-    /*position: relative;*/
     z-index: 1;
     animation: slide-left-in 0.4s
   }
@@ -80,7 +79,6 @@
 
   .slide-left-out {
     display: block;
-    /*position: relative;*/
     z-index: 0;
     animation: slide-left-out 0.4s
   }
@@ -96,7 +94,6 @@
 
   .slide-right-in {
     display: block;
-    /*position: relative;*/
     z-index: 1;
     animation: slide-right-in 0.4s
   }
@@ -112,7 +109,6 @@
 
   .slide-right-out {
     display: block;
-    /*position: relative;*/
     z-index: 0;
     animation: slide-right-out 0.4s
   }
