@@ -10,9 +10,14 @@
     const LENGTH = FIGURE.length;
     const CHEVRON_LEFT = document.querySelectorAll('.chevron-left');
     const CHEVRON_RIGHT = document.querySelectorAll('.chevron-right');
-    const DURATION = 3000; // milliseconds
-
+    const DURATION = 7000; // milliseconds
     let state = 0;
+    let timeOutVar;
+
+    // start automatic slideShow
+    const timeOutVarStart = setTimeout(function () {
+        slideShow(1);
+    }, DURATION);
 
     // Returns the correct index to avoid negative or above last index
     function normalize(idx) {
@@ -25,11 +30,17 @@
     for (let i = 0; i < CHEVRON_LEFT.length; i++) {
         // left chevron click event
         CHEVRON_LEFT[i].addEventListener('click', function (e) {
-            slide(1);
+            // stop automatic slideShow
+            clearTimeout(timeOutVarStart);
+            clearTimeout(timeOutVar);
+            slideShow(1);
         });
         // right chevron click event (same number of left and right chevrons)
         CHEVRON_RIGHT[i].addEventListener('click', function (e) {
-            slide(-1);
+            // stop automatic slideShow
+            clearTimeout(timeOutVarStart);
+            clearTimeout(timeOutVar);
+            slideShow(-1);
         });
     }
 
@@ -51,6 +62,16 @@
 
         // current slide
         state = normalize(state + i);
+
+    }
+
+    function slideShow(i) {
+        slide(i);
+
+        timeOutVar = setTimeout(function () {
+            slideShow(i);
+        }, DURATION);
+
     }
 
 })();
