@@ -15,9 +15,9 @@
     let timeOutVar;
 
     // start automatic slideShow
-    // const timeOutVarStart = setTimeout(function () {
-    //     slideShow(1);
-    // }, DURATION);
+    const timeOutVarStart = setTimeout(function () {
+        slideShow(1);
+    }, DURATION);
 
     // Returns the correct index to avoid negative or above last index
     function normalize(idx) {
@@ -31,7 +31,7 @@
         // left chevron click event
         CHEVRON_LEFT[i].addEventListener('click', function (e) {
             // stop automatic slideShow
-            // clearTimeout(timeOutVarStart);
+            clearTimeout(timeOutVarStart);
             clearTimeout(timeOutVar);
             console.log('chevron left');
             slideShow(1);
@@ -39,7 +39,7 @@
         // right chevron click event (same number of left and right chevrons)
         CHEVRON_RIGHT[i].addEventListener('click', function (e) {
             // stop automatic slideShow
-            // clearTimeout(timeOutVarStart);
+            clearTimeout(timeOutVarStart);
             clearTimeout(timeOutVar);
             slideShow(-1);
         });
@@ -69,9 +69,9 @@
     function slideShow(i) {
         slide(i);
 
-        // timeOutVar = setTimeout(function () {
-        //     slideShow(i);
-        // }, DURATION);
+        timeOutVar = setTimeout(function () {
+            slideShow(i);
+        }, DURATION);
 
     }
 
