@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <title>instagram api</title>
+</head>
+<body>
+<section class="instagram-images"></section>
+</body>
+<script>
+
+    function FetchInstagram(token, selector) {
+        this.token = token;
+        this.selector = selector;
+    }
+
+    FetchInstagram.prototype.fetchData = function () {
+        return fetch("https://api.instagram.com/v1/users/self/media/recent/?access_token=" + this.token,
+            {method: 'GET'})
+            .then(function (response) {
+                return response.json()
+            })
+            .then(function (data) {
+                return data.data;
+            })
+            .catch(function (err) {
+                console.log(err);
+            });
+    };
+
+    FetchInstagram.prototype.textHTML = function (imageSrc, imageAlt) {
+        let element = "<div>";
+        element += "<img src='" + imageSrc + "' alt='" + imageAlt + "'>";
+        element += "</div>";
+        return element;
+    };
+
+    FetchInstagram.prototype.setHTML = function () {
+        const self = this;
+        const ELEMENT = document.querySelector(this.selector);
+
+        function getHTMLoutput(data) {
+            let output = '';
+            data.map(function (image) {
+                output += self.textHTML(image.images.low_resolution.url, image.caption.text);
+            });
+            return output;
+        }
+
+        function insertHTMLoutput(output) {
+            ELEMENT.innerHTML = output;
+        }
+
+        this.fetchData()
+            .then(getHTMLoutput)
+            .then(insertHTMLoutput);
+    };
+
+    const INSTAGRAM_TOKEN = "3959116306.6ae6b94.93ae2da0898848099338d9cde7ac0ad2";
+    const texadelphiaInstagram = new FetchInstagram(INSTAGRAM_TOKEN, '.instagram-images');
+
+    texadelphiaInstagram.setHTML();
+
+</script>
+</html>
