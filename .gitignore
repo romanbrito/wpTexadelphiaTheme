@@ -17,5 +17,8 @@
 /locations/yarn-debug.log*
 /locations/yarn-error.log*
 
+# Constants
+/locations/src/utilities/constants.js
+
 # ide
 .idea
