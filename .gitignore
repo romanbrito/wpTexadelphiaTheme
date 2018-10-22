@@ -1,5 +1,21 @@
 # node modules
 /node_modules
 
+
+# locations react node modules
+/locations/node_modules
+# production
+/locations/build
+# misc
+.DS_Store
+/locations/.env.local
+/locations/.env.development.local
+/locations/.env.test.local
+/locations/.env.production.local
+
+/locations/npm-debug.log*
+/locations/yarn-debug.log*
+/locations/yarn-error.log*
+
 # ide
 .idea
