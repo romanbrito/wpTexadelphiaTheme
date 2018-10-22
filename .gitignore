@@ -1,5 +1,5 @@
-# gulp-dev modules
-/gulp-dev/node_modules
+# node modules
+/node_modules
 
 # ide
 .idea
