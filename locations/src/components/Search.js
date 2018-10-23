@@ -4,8 +4,7 @@ import {distanceMatrix} from '../utilities/utilities'
 class Search extends Component {
   state = {
     search: '',
-    locations: this.props.data,
-    isGeoSorted: false
+    locations: this.props.data
   }
 
   componentWillMount() {
@@ -23,7 +22,6 @@ class Search extends Component {
 
     const reExp = new RegExp(this.state.search, "i")
 
-    // this.state.currentPosition && !this.state.isGeoSorted && this.setDistance(this.state.currentPosition, this.props.data)
     return (
       <div>
         <input
@@ -56,7 +54,6 @@ class Search extends Component {
               )
           }
         </ul>
-        {/*{this.state.currentPosition && !this.state.isGeoSorted && this.setDistance(this.state.currentPosition, this.props.data)}*/}
       </div>
     )
   }
@@ -76,7 +73,7 @@ class Search extends Component {
     })
 
 
-    this.setState({locations: location_distance, isGeoSorted: true})
+    this.setState({locations: location_distance})
   }
 
 }
