@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {arrayToObject} from '../utilities/utilities'
+// import {arrayToObject} from '../utilities/utilities'
 import Map from './Map'
 
 const JSON_URL = 'https://www.texadelphia.com/wp-content/themes/texsite/json/locations.json'

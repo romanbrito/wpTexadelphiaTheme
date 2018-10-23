@@ -3,7 +3,8 @@ import {compose, withProps, lifecycle, withHandlers} from 'recompose'
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from 'react-google-maps'
 import {MarkerClusterer} from 'react-google-maps/lib/components/addons/MarkerClusterer'
 import {googleMapURL} from '../utilities/constants'
-import {destination} from "../utilities/utilities";
+import {destination} from '../utilities/utilities';
+import Search from "./Search";
 
 const MapComponent = compose(
   withProps({
@@ -12,9 +13,7 @@ const MapComponent = compose(
     containerElement: <div style={{height: `71vh`}}/>,
     mapElement: <div id="map" className="" style={{height: `100%`}}/>,
   }),
-  withHandlers({
-
-  }),
+  withHandlers({}),
   lifecycle({
     componentWillMount() {
       const {data} = this.props
@@ -51,23 +50,25 @@ const MapComponent = compose(
           gridSize={15}>
           {props.data.map(marker => (
             <Marker
-            key={marker.label}
-            position={marker.coordinates}
-            label={marker.label}
-            onClick={e => window.open(destination(marker.address, marker.city, marker.state, marker.zip))}
+              key={marker.label}
+              position={marker.coordinates}
+              label={marker.label}
+              onClick={e => window.open(destination(marker.address, marker.city, marker.state, marker.zip))}
             />
           ))}
         </MarkerClusterer>
       </GoogleMap>
+
+      <Search data={props.data}/>
     </div>
   )
 })
 
 const Map = ({data}) => {
 
-    return (
-      <MapComponent data={data}/>
-    )
+  return (
+    <MapComponent data={data}/>
+  )
 }
 
 export default Map
