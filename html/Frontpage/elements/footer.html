@@ -207,25 +207,25 @@
         <a href="">Privacy Policy</a>
         <p class="copyright">© 2018 Texadelphia Franchising, LLC</p>
     </section>
-
-    <script>
-      // dropdown toggle
-      const DROP_DOWN = document.querySelectorAll('.dropdown-toggle');
-      for (var i = 0; i < DROP_DOWN.length; i++) {
-        DROP_DOWN[i].addEventListener('click', function (e) {
-          e.preventDefault();
-          const SUBMENU = e.currentTarget.parentElement.nextElementSibling;
-          const CHEVRON_UP = e.currentTarget.children[0];
-          const CHEVRON_DOWN = e.currentTarget.children[1];
-
-          // show submenu
-          SUBMENU.classList.toggle('toggled-on');
-          CHEVRON_DOWN.classList.toggle('toggle-on');
-          CHEVRON_UP.classList.toggle('toggle-on');
-        })
-      }
-    </script>
-
 </footer>
+
+<script>
+  // dropdown toggle
+  const DROP_DOWN = document.querySelectorAll('.dropdown-toggle');
+  for (var i = 0; i < DROP_DOWN.length; i++) {
+    DROP_DOWN[i].addEventListener('click', function (e) {
+      e.preventDefault();
+      const SUBMENU = e.currentTarget.parentElement.nextElementSibling;
+      const CHEVRON_UP = e.currentTarget.children[0];
+      const CHEVRON_DOWN = e.currentTarget.children[1];
+
+      // show submenu
+      SUBMENU.classList.toggle('toggled-on');
+      CHEVRON_DOWN.classList.toggle('toggle-on');
+      CHEVRON_UP.classList.toggle('toggle-on');
+    })
+  }
+</script>
+
 </body>
 </html>
