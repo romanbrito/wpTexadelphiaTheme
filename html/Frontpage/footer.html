@@ -6,6 +6,11 @@
     <title>Footer</title>
 </head>
 <style>
+
+    :focus {
+        outline: none;
+    }
+
     .footer {
         background-color: #201e1c;
         width: 100%;
@@ -19,7 +24,8 @@
 
     .bottom {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 1em;
     }
 
     .bottom a {
@@ -44,6 +50,7 @@
         text-decoration: none;
         padding: .6em 1em;
         border: solid 1px;
+        text-align: center;
     }
 
     .locations li a:hover {
@@ -59,11 +66,21 @@
         width: 1em;
         color: white;
         display: none;
+        cursor: pointer;
     }
 
     .chevron-down {
         width: 1em;
         color: white;
+        cursor: pointer;
+    }
+
+    .chevron-up.toggle-on {
+        display: block;
+    }
+
+    .chevron-down.toggle-on {
+        display: none;
     }
 
     .toggled-on {
@@ -72,9 +89,10 @@
 
     .sub-locations li a {
         padding-left: 2em;
+        background-color: #cccccc;
     }
 
-    @media screen and (min-width: 30em){
+    @media screen and (min-width: 50em) {
         .footer-locations {
             display: flex;
             flex-wrap: wrap;
@@ -87,6 +105,10 @@
 
         .locations li a {
             border: none;
+        }
+
+        .sub-locations li a {
+            background-color: #201e1c;
         }
     }
 
@@ -181,21 +203,26 @@
         </ul>
     </section>
     <section class="bottom">
-        <p class="copyright">© 2018 Texadelphia Franchising, LLC</p>
         <a href="">Sitemap</a>
         <a href="">Privacy Policy</a>
+        <p class="copyright">© 2018 Texadelphia Franchising, LLC</p>
     </section>
 
     <script>
       // dropdown toggle
       const DROP_DOWN = document.querySelectorAll('.dropdown-toggle');
       for (var i = 0; i < DROP_DOWN.length; i++) {
-        console.log(DROP_DOWN[i]);
         DROP_DOWN[i].addEventListener('click', function (e) {
           e.preventDefault();
-          e.currentTarget.parentElement.nextElementSibling.classList.toggle('toggled-on');
-        })
+          const SUBMENU = e.currentTarget.parentElement.nextElementSibling;
+          const CHEVRON_UP = e.currentTarget.children[0];
+          const CHEVRON_DOWN = e.currentTarget.children[1];
 
+          // show submenu
+          SUBMENU.classList.toggle('toggled-on');
+          CHEVRON_DOWN.classList.toggle('toggle-on');
+          CHEVRON_UP.classList.toggle('toggle-on');
+        })
       }
     </script>
 
