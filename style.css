@@ -979,16 +979,15 @@ h2.footer-heading {
   .footer .dropdown-toggle {
     background: none;
     border: none;
-    padding: 0 1em; }
+    padding: 0 1em;
+    cursor: pointer; }
   .footer .chevron-up {
     width: 1em;
     color: white;
-    display: none;
-    cursor: pointer; }
+    display: none; }
   .footer .chevron-down {
     width: 1em;
-    color: white;
-    cursor: pointer; }
+    color: white; }
   .footer .chevron-up.toggle-on {
     display: block; }
   .footer .chevron-down.toggle-on {

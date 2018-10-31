@@ -59,19 +59,18 @@ h2.footer-heading {
     background: none;
     border: none;
     padding: 0 1em;
+    cursor: pointer;
   }
 
   .chevron-up {
     width: 1em;
     color: white;
     display: none;
-    cursor: pointer;
   }
 
   .chevron-down {
     width: 1em;
     color: white;
-    cursor: pointer;
   }
 
   .chevron-up.toggle-on {
