@@ -15,6 +15,11 @@
   color: #2d2d2d;
 }
 
+h2.footer-heading {
+  text-align: center;
+  margin: 0;
+}
+
 .footer {
 
   background-color: #201e1c;
@@ -85,6 +90,9 @@
   }
 
   @media screen and (min-width: 55em) {
+    // footer
+    padding: 4em;
+
     .footer-locations {
       display: flex;
       flex-wrap: wrap;

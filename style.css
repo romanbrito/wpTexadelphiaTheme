@@ -889,7 +889,8 @@ a {
 ## Main Article in Frontpage
 --------------------------------------------------------------*/
 .frontpage-article {
-  position: relative; }
+  position: relative;
+  line-height: 0; }
   .frontpage-article .article-container {
     position: absolute;
     color: #2d2d2d;
@@ -899,7 +900,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1%; }
+    padding: 1%;
+    line-height: 1.5; }
   .frontpage-article .article-figure {
     margin: 0; }
     .frontpage-article .article-figure img {
@@ -947,6 +949,10 @@ a {
   display: block;
   color: #2d2d2d; }
 
+h2.footer-heading {
+  text-align: center;
+  margin: 0; }
+
 .footer {
   background-color: #201e1c;
   width: 100%;
@@ -991,16 +997,18 @@ a {
     padding-left: 2em;
     background-color: #cccccc; }
   @media screen and (min-width: 55em) {
-    .footer .footer-locations {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; }
-    .footer .locations li {
-      flex: 1 0 auto; }
-    .footer .locations li a {
-      border: none; }
-    .footer .sub-locations li a {
-      background-color: #201e1c; } }
+    .footer {
+      padding: 4em; }
+      .footer .footer-locations {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; }
+      .footer .locations li {
+        flex: 1 0 auto; }
+      .footer .locations li a {
+        border: none; }
+      .footer .sub-locations li a {
+        background-color: #201e1c; } }
 
 /*--------------------------------------------------------------
 # Infinite scroll
