@@ -1,0 +1,138 @@
+/* tabs */
+
+.nav-tabs {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  /*justify-content: center;*/
+}
+
+.nav-tabs li {
+  margin-bottom: -1px;
+  position: relative;
+  display: block;
+}
+
+.tab-feedback,.tab-franchising {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.nav-tabs {
+  max-width: 500px;
+  text-align: center;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.tab.active {
+  border: 1px solid #ddd;
+  border-bottom-color: white;
+  display: inline-block;
+  color: #c80000;
+}
+
+/*end Tabs*/
+
+.contact-us {
+  padding: 1%;
+}
+
+#gform_1,#gform_2 {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.gform_body ul {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+.gform_body li {
+  margin-bottom: .5em;
+}
+
+/* Input Fields */
+.gform_fields input[type="text"],
+.gform_fields input[type="tel"],
+.gform_fields input[type="url"],
+.gform_fields input[type="email"],
+.gform_fields input[type="number"],
+.gform_fields select {
+  box-sizing: border-box;
+  padding: 0.6em 0.8em;
+  color: #999;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9em;
+  text-decoration: none;
+  line-height: normal;
+  max-height: 3em;
+
+  width: 100%;
+}
+
+.gform_fields input[type="text"]:focus,
+.gform_fields input[type="tel"]:focus,
+.gform_fields input[type="url"]:focus,
+.gform_fields input[type="email"]:focus,
+.gform_fields input[type="number"]:focus,
+.gform_fields select:focus {
+  color: #333;
+  border: 1px solid #C17CCF;
+  outline: none;
+  background: #f2f2f2;
+}
+
+.gform_fields textarea {
+  display: block;
+  box-sizing: border-box;
+  font: 0.9em Lato, Helvetica, sans-serif;
+  width: 100%;
+  height: 6em;
+  overflow: auto;
+  padding: 0.6em 0.8em;
+  color: #999;
+  background: #f7f7f7;
+  border: 1px solid #e1e1e1;
+  line-height: normal;
+}
+
+.gform_footer {
+
+  input[type="submit"]{
+    border-radius: 0 2px 2px 0;
+    box-sizing: content-box;
+    background: #c80000;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: white;
+    padding: 0.35em 0.75em;
+    border: none;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+}
+
+.gform_button:hover,.gform_button:focus {
+  opacity: .7;
+}
