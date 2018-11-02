@@ -6,6 +6,54 @@
     <title>Contact</title>
 </head>
 <style>
+/* tabs */
+
+.nav-tabs {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    /*justify-content: center;*/
+}
+
+.nav-tabs li {
+    margin-bottom: -1px;
+    position: relative;
+    display: block;
+}
+
+.tab-feedback,.tab-franchising {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.nav-tabs {
+    max-width: 500px;
+    text-align: center;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.tab.active {
+    border: 1px solid #ddd;
+    border-bottom-color: white;
+    display: inline-block;
+    color: #c80000;
+}
+
+/*end Tabs*/
 
     #gform_1,#gform_2 {
         width: 100%;
@@ -74,7 +122,7 @@
     .gform_button {
         border-radius: 0 2px 2px 0;
         box-sizing: content-box;
-        background: #8B798C;
+        background: #c80000;
         font-weight: 300;
         text-transform: uppercase;
         color: white;
@@ -86,7 +134,7 @@
     }
 
     .gform_button:hover,.gform_button:focus {
-        background: #C17CCF;
+        opacity: .7;
     }
 
 
@@ -94,11 +142,11 @@
 <body>
 <div class="contact-us container">
     <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">Feedback</a></li>
-        <li><a data-toggle="tab" href="#menu1">Franchising</a></li>
+        <li><button class="tab active" data-tabindex="0" data-toggle="tab">Feedback</button></li>
+        <li><button class="tab" data-tabindex="1" data-toggle="tab">Franchising</button></li>
     </ul>
     <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
+        <div id="feedback" class="tab-feedback active">
             <!--panel one-->
             <div class="form-group">
                 <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_1'>
@@ -190,7 +238,7 @@
                 </div>
             </div>
         </div>
-        <div id="menu1" class="tab-pane fade">
+        <div id="franchising" class="tab-franchising">
             <!--panel two-->
             <div class="form-group">
                 <div class='gf_browser_chrome gform_wrapper' id='gform_wrapper_2'>
@@ -415,6 +463,22 @@
     </div>
 </div>
 <script>
+var TAB = document.querySelectorAll('.tab');
+var FEEDBACK = document.querySelector('.tab-feedback');
+var FRANCHISING = document.querySelector('.tab-franchising');
+var TAB_ELEMENTS = [FEEDBACK, FRANCHISING];
+
+for (var i = 0; i < TAB.length; i++) {
+  TAB[i].addEventListener('click', function (e) {
+    var idx = Number(e.target.getAttribute('data-tabindex'));
+    for (var i = 0; i < TAB_ELEMENTS.length; i++) {
+      TAB_ELEMENTS[i].classList.remove('active');
+      TAB[i].classList.remove('active');
+    }
+    TAB_ELEMENTS[idx].classList.toggle('active');
+    e.target.classList.toggle('active');
+  })
+}
 
 </script>
 </body>
