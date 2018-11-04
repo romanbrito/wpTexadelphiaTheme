@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <title>Texnation</title>
+</head>
+<style>
+    .site {
+        display: grid;
+        background-image: url("./images/LightWood11x17.jpg");
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*grid-template-rows: 1fr 1fr auto 1fr;*/
+        grid-template-areas: "title title title title" ". article figure ." ". aside aside ." ". footer footer .";
+    }
+
+    .header {
+        grid-area: title;
+        display: grid;
+    }
+
+    .title {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content {
+        grid-area: article;
+    }
+
+    .mobile {
+        grid-area: figure;
+    }
+
+    .contain-queso {
+        grid-area: aside;
+        display: grid;
+    }
+
+    .text-bar {
+        grid-column: 1;
+        grid-row: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /*align-items: center;*/
+    }
+
+    .text-bar p {
+        padding-left: 1%;
+    }
+
+    .apps {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+</style>
+<body>
+<main class="site">
+    <!--<section class="background">-->
+    <!--<img id="bg-app" src="./images/LightWood11x17.jpg">-->
+    <!--</section>-->
+
+    <section class="header">
+        <img class="title" src="./images/brownLayer8.png" width="100%">
+        <div class="title">
+            <img src="./images/become.png" width="50%">
+            <img src="./images/TexNation.png" width="50%">
+        </div>
+    </section>
+
+    <section class="content">
+        <article>
+            <h1>DOWNLOAD THE </h1>
+            <h1>MOBILE APP</h1>
+            <ul>
+                <li>EARN POINTS</li>
+                <li>GET GREAT REWARDS</li>
+                <li>FREE MEALS</li>
+                <li>HOT DEALS FOR MEMBERS ONLY</li>
+            </ul>
+        </article>
+    </section>
+
+    <figure class="mobile">
+        <img src="./images/IphoneApp.png" width="100%">
+    </figure>
+
+    <article class="contain-queso">
+        <img class="text-bar" src="./images/bar-queso.png" width="100%">
+        <div class="text-bar">
+            <p>Get a FREE Chips + Queso when you join!</p>
+        </div>
+    </article>
+
+    <section class="apps">
+        <a href="https://itunes.apple.com/us/app/texadelphia-nation/id1035698707" target="_blank"><img
+                src="./images/AppleStore.png" width="100%"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.loyalty3.texadelphia&amp;hl=en" target="_blank"><img
+                src="./images/GooglePlay.png" width="100%"></a>
+    </section>
+
+</main>
+</body>
+</html>
