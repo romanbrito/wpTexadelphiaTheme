@@ -1134,6 +1134,79 @@ h2.footer-heading {
   opacity: .7; }
 
 /*--------------------------------------------------------------
+## Texnation page
+--------------------------------------------------------------*/
+.texnation {
+  display: grid;
+  background-image: url("https://res.cloudinary.com/spottermart/image/upload/v1541384213/Texadelphia/LightWood11x17.jpg");
+  background-size: cover;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr auto 1fr;
+  grid-template-areas: "title title title title" "article article figure figure" "aside aside aside aside" "footer footer footer footer"; }
+  .texnation .header {
+    grid-area: title;
+    display: grid; }
+  .texnation .title {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .texnation .content {
+    grid-area: article;
+    padding-left: 1em;
+    color: #4e170d; }
+  .texnation .content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  .texnation .content li {
+    font-family: "kremlin-pro", sans-serif;
+    font-size: 1em; }
+  .texnation .content li:before {
+    font-family: "Courier 10 Pitch", Courier, monospace;
+    content: '* '; }
+  .texnation .content h1 {
+    font-family: "chunk", serif;
+    font-size: 1.1em; }
+  .texnation .mobile {
+    grid-area: figure; }
+  .texnation .contain-queso {
+    grid-area: aside;
+    display: grid; }
+  .texnation .text-bar {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/ }
+  .texnation .text-bar p {
+    padding-left: 2%;
+    color: white;
+    font-family: "kremlin-pro", sans-serif;
+    font-size: 1.1em; }
+  .texnation .apps {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+@media screen and (min-width: 1025px) {
+  .texnation {
+    grid-template-areas: "title title title title" ". article figure ." ". aside aside ." ". footer footer ."; } }
+
+@media screen and (min-width: 768px) {
+  .texnation .content li {
+    font-size: 1.5em; }
+  .texnation .content h1 {
+    font-size: 2em; }
+  .texnation .text-bar p {
+    font-size: 2em; } }
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
