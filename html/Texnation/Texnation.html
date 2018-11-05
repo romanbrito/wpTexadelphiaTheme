@@ -3,15 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <link rel="stylesheet" href="https://use.typekit.net/mgd0hnb.css">
     <title>Texnation</title>
 </head>
 <style>
+    body {
+        margin: 0;
+    }
     .site {
         display: grid;
         background-image: url("./images/LightWood11x17.jpg");
+        background-size: cover;
+        height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        /*grid-template-rows: 1fr 1fr auto 1fr;*/
-        grid-template-areas: "title title title title" ". article figure ." ". aside aside ." ". footer footer .";
+        grid-template-rows: auto 1fr auto 1fr;
+        grid-template-areas: "title title title title" "article article figure figure" "aside aside aside aside" "footer footer footer footer";
+    }
+
+    @media screen and (min-width: 1025px){
+        .site {
+            height: 100%;
+            grid-template-areas: "title title title title" ". article figure ." ". aside aside ." ". footer footer .";
+        }
     }
 
     .header {
@@ -30,8 +43,28 @@
 
     .content {
         grid-area: article;
+        padding-left: 1em;
+        color: #4e170d;
     }
 
+    .content ul {
+        list-style: none;
+    }
+
+    .content li {
+        font-family: "kremlin-pro", sans-serif;
+        font-size: 1.5em;
+    }
+
+    .content li:before {
+        font-family: "Courier 10 Pitch", Courier, monospace;
+        content: '* ';
+    }
+
+    .content h1 {
+        font-family: "chunk", serif;
+        font-size: 2em;
+    }
     .mobile {
         grid-area: figure;
     }
@@ -51,13 +84,21 @@
     }
 
     .text-bar p {
-        padding-left: 1%;
+        padding-left: 2%;
+        color: white;
+        font-family: "kremlin-pro", sans-serif;
+        font-size: 2em;
     }
 
     .apps {
         grid-area: footer;
         display: flex;
         justify-content: space-around;
+        align-items: center;
+    }
+
+    .app {
+        /*flex: 1 0 auto;*/
     }
 
 
@@ -101,10 +142,10 @@
     </article>
 
     <section class="apps">
-        <a href="https://itunes.apple.com/us/app/texadelphia-nation/id1035698707" target="_blank"><img
-                src="./images/AppleStore.png" width="100%"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.loyalty3.texadelphia&amp;hl=en" target="_blank"><img
-                src="./images/GooglePlay.png" width="100%"></a>
+        <a class="app" href="https://itunes.apple.com/us/app/texadelphia-nation/id1035698707" target="_blank"><img
+                src="./images/AppleStore.png"></a>
+        <a class="app" href="https://play.google.com/store/apps/details?id=com.loyalty3.texadelphia&amp;hl=en" target="_blank"><img
+                src="./images/GooglePlay.png"></a>
     </section>
 
 </main>
