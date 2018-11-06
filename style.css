@@ -894,19 +894,34 @@ a {
   .frontpage-article .article-container {
     position: absolute;
     color: #2d2d2d;
-    font-size: 1.7vw;
+    font-size: 3.5vw;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1%;
-    line-height: 1.5; }
+    line-height: normal; }
+    .frontpage-article .article-container h2 {
+      margin-top: 0; }
+    .frontpage-article .article-container h3 {
+      margin: 0; }
   .frontpage-article .article-figure {
     margin: 0; }
     .frontpage-article .article-figure img {
       width: 100%;
       opacity: .2; }
+  .frontpage-article .small-screen {
+    display: block; }
+  .frontpage-article .big-screen {
+    display: none; }
+  @media screen and (min-width: 768px) {
+    .frontpage-article .small-screen {
+      display: none; }
+    .frontpage-article .big-screen {
+      display: block; }
+    .frontpage-article .article-container {
+      font-size: 2.4vw; } }
 
 /*--------------------------------------------------------------
 ## Instagram aside in Frontpage
