@@ -3,7 +3,7 @@
     const placeImage = document.createElement('IMG');
     placeImage.src = document.querySelector('.slide-images').getAttribute('src');
     placeImage.style.visibility = "hidden";
-    placeImage.style.width = '100%';
+    placeImage.style.height = '100%';
     document.querySelector('.carousel').appendChild(placeImage);
 
     // getting elements and chevrons

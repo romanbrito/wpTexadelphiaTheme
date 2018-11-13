@@ -1,5 +1,35 @@
+.site {
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  height: 100vh;
+  grid-template-areas: "background" "background" "background";
+}
+
+.site-content {
+
+  z-index: 2;
+  grid-area: background;
+  .content-area,.site-main,.hentry,.entry-content{
+    height: 100%;
+  }
+}
+
 .site-main {
   .entry-header {
+    display: none;
+  }
+
+  .hentry, .entry-content {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.site-branding {
+  p {
     display: none;
   }
 }

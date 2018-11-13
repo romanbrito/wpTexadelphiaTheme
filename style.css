@@ -751,7 +751,10 @@ a {
 .site-header {
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  grid-column: 1/2;
+  grid-row: 1/2;
+  z-index: 3; }
   .site-header .main-navigation {
     width: auto; }
   .site-header::before, .site-header::after {
@@ -772,8 +775,37 @@ a {
 /*--------------------------------------------------------------
 ## Site Content
 --------------------------------------------------------------*/
+.site {
+  display: grid;
+  grid-template-rows: 10% 1fr 10%;
+  height: 100vh;
+  grid-template-areas: "background" "background" "background"; }
+
+.site-content {
+  z-index: 2;
+  grid-area: background; }
+  .site-content .content-area, .site-content .site-main, .site-content .hentry, .site-content .entry-content {
+    height: 100%; }
+
 .site-main .entry-header {
   display: none; }
+
+.site-main .hentry, .site-main .entry-content {
+  margin: 0; }
+
+.site-main p {
+  margin: 0; }
+
+.site-branding p {
+  display: none; }
+
+/*--------------------------------------------------------------
+## Site Footer
+--------------------------------------------------------------*/
+.site-footer {
+  z-index: 3;
+  grid-column: 1/2;
+  grid-row: 3/4; }
 
 /*--------------------------------------------------------------
 ## SlideShow in Frontpage
@@ -781,9 +813,9 @@ a {
 .carousel {
   margin: 0;
   line-height: 0;
-  width: 100%;
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100%; }
   .carousel .slide {
     margin: 0;
     position: absolute;
@@ -791,7 +823,7 @@ a {
     height: 100%;
     display: none; }
   .carousel .slide-images {
-    width: 100%;
+    height: 100%;
     position: absolute; }
   .carousel figcaption {
     height: 100%;
