@@ -814,7 +814,28 @@ a {
 .site-footer {
   z-index: 3;
   grid-column: 1/2;
-  grid-row: 3/4; }
+  grid-row: 3/4;
+  display: none; }
+  .site-footer .copyright {
+    font-size: 1rem;
+    margin: 0;
+    color: white; }
+  .site-footer .bottom {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding: 1em; }
+  .site-footer .bottom a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    margin-right: 2em; }
+
+@media screen and (min-width: 768px) {
+  .site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; } }
 
 /*--------------------------------------------------------------
 ## SlideShow in Frontpage
@@ -994,21 +1015,6 @@ a {
 /*--------------------------------------------------------------
 ## Footer in Frontpage
 --------------------------------------------------------------*/
-.copyright {
-  font-size: 1rem;
-  margin: 0; }
-
-.bottom {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 1em; }
-
-.bottom a {
-  text-decoration: none;
-  display: block;
-  color: #2d2d2d; }
-
 h2.footer-heading {
   text-align: center;
   margin: 0;
@@ -1116,7 +1122,8 @@ h2.footer-heading {
 
 /*end Tabs*/
 .contact-us {
-  padding: 1%; }
+  padding: 1%;
+  padding-top: 8em; }
 
 #gform_1, #gform_2 {
   width: 100%;
