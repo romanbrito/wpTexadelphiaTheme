@@ -16,6 +16,9 @@
 
     .close-button {
       cursor: pointer;
+      position: fixed;
+      right: 0;
+      top: 0;
     }
   }
 
@@ -91,6 +94,7 @@
 .main-navigation ul {
   display: block;
   cursor: pointer;
+  text-align: center;
 }
 
 //@media screen and (min-width: 37.5em) {
