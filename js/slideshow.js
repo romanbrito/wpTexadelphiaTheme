@@ -4,6 +4,7 @@
     placeImage.src = document.querySelector('.slide-images').getAttribute('src');
     placeImage.style.visibility = "hidden";
     placeImage.style.height = '100%';
+    placeImage.style.width = '100%';
     document.querySelector('.carousel').appendChild(placeImage);
 
     // getting elements and chevrons
