@@ -561,9 +561,11 @@ a {
     right: 0;
     top: 0;
     bottom: 0;
-    display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    display: none; }
+    .main-navigation .menu-main-navigation-container .close-button {
+      cursor: pointer; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -595,15 +597,10 @@ a {
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
+.main-navigation.toggled ul,
+.main-navigation ul {
   display: block;
   cursor: pointer; }
-
-@media screen and (min-width: 37.5em) {
-  .menu-toggle {
-    display: none; }
-  .main-navigation ul {
-    display: block; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
