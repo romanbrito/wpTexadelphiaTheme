@@ -1,7 +1,11 @@
 (function () {
     // setting a copy of an image as placeholder
     const placeImage = document.createElement('IMG');
-    placeImage.src = document.querySelector('.slide-images').getAttribute('src');
+    const sampleImage = document.querySelector('.slide-images');
+    if (! sampleImage) { // case of different page
+      return;
+    }
+    placeImage.src = sampleImage.getAttribute('src');
     placeImage.style.visibility = "hidden";
     placeImage.style.height = '100%';
     placeImage.style.width = '100%';
