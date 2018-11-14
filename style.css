@@ -556,7 +556,6 @@ a {
   float: left;
   width: 100%; }
   .main-navigation .menu-main-navigation-container {
-    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     left: 0;
     right: 0;
@@ -564,12 +563,32 @@ a {
     bottom: 0;
     justify-content: center;
     align-items: center;
-    display: none; }
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7); }
     .main-navigation .menu-main-navigation-container .close-button {
       cursor: pointer;
       position: fixed;
       right: 0;
-      top: 0; }
+      top: 0;
+      border: none;
+      background: none;
+      color: white;
+      font-weight: 700;
+      font-size: 2em;
+      margin-top: .7em;
+      margin-right: 0; }
+    @media screen and (min-width: 500px) {
+      .main-navigation .menu-main-navigation-container .close-button {
+        margin-top: 1em;
+        margin-right: 1em; } }
+  .main-navigation .show-menu {
+    animation: backgroundChange .4s; }
+
+@keyframes backgroundChange {
+  from {
+    background-color: rgba(0, 0, 0, 0.1); }
+  to {
+    background-color: rgba(0, 0, 0, 0.7); } }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -608,6 +627,15 @@ a {
   display: block;
   cursor: pointer;
   text-align: center; }
+
+.menu-toggle {
+  margin-right: 1em;
+  margin-left: 1em;
+  margin-top: 3em; }
+
+@media screen and (min-width: 500px) {
+  .menu-toggle {
+    margin-right: 4em; } }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -980,6 +1008,9 @@ a {
     color: whitesmoke; }
     .frontpage-article .article-container h2 {
       margin: 0; }
+
+.show-frontpage-article {
+  display: none; }
 
 @media screen and (min-width: 768px) {
   .frontpage-article {
