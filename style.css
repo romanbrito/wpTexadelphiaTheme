@@ -556,7 +556,7 @@ a {
   float: left;
   width: 100%; }
   .main-navigation .menu-main-navigation-container {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     left: 0;
     right: 0;
@@ -594,7 +594,9 @@ a {
     .main-navigation ul li.focus > ul {
       left: auto; }
   .main-navigation li {
-    position: relative; }
+    position: relative;
+    font-size: 2em;
+    font-weight: 700; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
@@ -772,11 +774,11 @@ a {
   .site-header .menu-item {
     padding: 1rem; }
     .site-header .menu-item a {
-      color: white; }
+      color: #c80000; }
     .site-header .menu-item a:visited {
-      color: red; }
+      color: #c80000; }
     .site-header .menu-item a:hover, .site-header .menu-item a:focus, .site-header .menu-item a:active {
-      color: orange; }
+      color: #c80000; }
     .site-header .menu-item a:focus {
       outline: 0; }
     .site-header .menu-item a:hover, .site-header .menu-item a:active {
@@ -839,9 +841,19 @@ a {
     justify-content: flex-end; } }
 
 /*--------------------------------------------------------------
+## Frontpage
+--------------------------------------------------------------*/
+.frontpage-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+/*--------------------------------------------------------------
 ## SlideShow in Frontpage
 --------------------------------------------------------------*/
 .carousel {
+  grid-column: 1/6;
+  grid-row: 1/2;
   margin: 0;
   line-height: 0;
   position: relative;
@@ -955,39 +967,25 @@ a {
 ## Main Article in Frontpage
 --------------------------------------------------------------*/
 .frontpage-article {
-  position: relative;
-  line-height: 0; }
+  grid-row: 1/2;
+  grid-column: 2/4;
+  z-index: 1; }
   .frontpage-article .article-container {
-    position: absolute;
-    color: #2d2d2d;
-    font-size: 3.5vw;
-    width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    padding: 1%;
-    line-height: normal; }
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6em;
+    color: whitesmoke; }
     .frontpage-article .article-container h2 {
-      margin-top: 0; }
-    .frontpage-article .article-container h3 {
       margin: 0; }
-  .frontpage-article .article-figure {
-    margin: 0; }
-    .frontpage-article .article-figure img {
-      width: 100%;
-      opacity: .2; }
-  .frontpage-article .small-screen {
-    display: block; }
-  .frontpage-article .big-screen {
-    display: none; }
-  @media screen and (min-width: 768px) {
-    .frontpage-article .small-screen {
-      display: none; }
-    .frontpage-article .big-screen {
-      display: block; }
+
+@media screen and (min-width: 768px) {
+  .frontpage-article {
+    grid-column: 2/3; }
     .frontpage-article .article-container {
-      font-size: 2.4vw; } }
+      font-size: 4.5em; } }
 
 /*--------------------------------------------------------------
 ## Instagram aside in Frontpage
