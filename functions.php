@@ -129,6 +129,8 @@ function texadelphia_scripts() {
 //	wp_enqueue_script( 'texadelphia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
     wp_enqueue_script( 'texadelphia-navigation', get_template_directory_uri() . '/js/nav.js', array(), '20181113', true );
 
+    wp_enqueue_script( 'texadelphia-FParticle', get_template_directory_uri() . '/js/article.js', array(), '20181114', true );
+
     wp_enqueue_script( 'texadelphia-slideshow', get_template_directory_uri() . '/js/slideshow.js', array(), '20181018', true );
 
 //    wp_enqueue_script( 'texadelphia-instagram', get_template_directory_uri() . '/js/instagram.js', array(), '20181021', true );
