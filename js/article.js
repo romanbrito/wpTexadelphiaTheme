@@ -1,7 +1,7 @@
 var ARTICLE_BUTTON = document.querySelectorAll('.article-button');
 var CLOSE_ARTICLE_BUTTON = document.createElement('BUTTON');
 var ARTICLE_CONTAINER = document.querySelectorAll('.article-container');
-CLOSE_ARTICLE_BUTTON.innerHTML = 'X';
+CLOSE_ARTICLE_BUTTON.innerHTML = 'CLOSE';
 CLOSE_ARTICLE_BUTTON.classList.add('close-article-button');
 var FRONTPAGE = document.querySelector('.site-content');
 

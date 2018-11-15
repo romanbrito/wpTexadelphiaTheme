@@ -51,15 +51,21 @@
     left: 0;
     height: 100%;
     width: 100%;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .close-article-button {
+      width: 98%;
+      padding: 2em;
+      cursor: pointer;
+    }
   }
 
   p {
     background: white;
-    width: 80%;
-    font-size: 270%;
-    padding: 2em;
+    width: 98%;
+    font-size: 125%;
   }
 
   p::after {
@@ -78,12 +84,29 @@
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
 
   .story-container {
+
+    .article-container {
+
+      .close-article-button {
+        width: 80%;
+      }
+
+    }
     .large {
       display: inline;
     }
+
+    p {
+      background: white;
+      width: 80%;
+      font-size: 270%;
+      padding: 2em;
+    }
+
   }
 
 }
