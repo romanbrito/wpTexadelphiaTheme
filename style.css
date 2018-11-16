@@ -1042,7 +1042,9 @@ a {
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: openArticle .4s; }
     .story-container .article-container .close-article-button {
       width: 98%;
       padding: 1.5em;
@@ -1051,20 +1053,16 @@ a {
       color: white;
       font-size: 1em;
       font-weight: 700; }
+
+@keyframes openArticle {
+  from {
+    background-color: rgba(0, 0, 0, 0.1); }
+  to {
+    background-color: rgba(0, 0, 0, 0.7); } }
   .story-container p {
     background: white;
     width: 98%;
     font-size: 125%; }
-  .story-container p::after {
-    content: "";
-    background-color: black;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    opacity: .9; }
   .story-container .large {
     display: none; }
 
