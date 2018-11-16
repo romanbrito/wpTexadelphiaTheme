@@ -57,8 +57,12 @@
 
     .close-article-button {
       width: 98%;
-      padding: 2em;
+      padding: 1.5em;
       cursor: pointer;
+      background-image: linear-gradient(to right, #000000 0%, #c80000 51%, #000000 100%);
+      color: white;
+      font-size: 1em;
+      font-weight: 700;
     }
   }
 
@@ -103,7 +107,7 @@
     p {
       background: white;
       width: 80%;
-      font-size: 270%;
+      font-size: 2vw;
       padding: 2em;
     }
 
