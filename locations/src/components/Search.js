@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {distanceMatrix} from '../utilities/utilities'
+import {Location, LocationContainer} from './StyledSearch'
 
 class Search extends Component {
   state = {
@@ -31,7 +32,7 @@ class Search extends Component {
           value={this.state.search}
           onChange={e => this.setState({search: e.target.value})}
         />
-        <ul>
+        <LocationContainer>
           {
             this.state.locations.filter(location =>
               location.name.search(reExp) !== -1 ||
@@ -41,7 +42,7 @@ class Search extends Component {
               location.city.search(reExp) !== -1
             )
               .map(list =>
-                <li key={list.label}>
+                <Location key={list.label}>
                   <h4>{list.name}</h4>
                   <p>{list.address}</p>
                   <p>{list.city} {list.state} {list.zip}</p>
@@ -50,10 +51,10 @@ class Search extends Component {
                   <p>{list.hours2}</p>
                   <p>{list.hours3}</p>
                   {list.miles && <p>Distance: {list.miles} miles</p>}
-                </li>
+                </Location>
               )
           }
-        </ul>
+        </LocationContainer>
       </div>
     )
   }
