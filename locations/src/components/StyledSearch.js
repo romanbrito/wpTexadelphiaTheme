@@ -4,6 +4,6 @@ export const Location = styled.li`
   list-style: none;
 `
 
-export const LocationContainer = styled.ul`
-  display: flex;
+export const SearchContainer = styled.div`
+  flex 1 0 50%;
 `

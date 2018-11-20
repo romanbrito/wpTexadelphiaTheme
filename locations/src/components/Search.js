@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {distanceMatrix} from '../utilities/utilities'
-import {Location, LocationContainer} from './StyledSearch'
+import {Location, SearchContainer} from './StyledSearch'
 
 class Search extends Component {
   state = {
@@ -24,7 +24,7 @@ class Search extends Component {
     const reExp = new RegExp(this.state.search, "i")
 
     return (
-      <div>
+      <SearchContainer>
         <input
           type="search"
           name="search"
@@ -32,7 +32,7 @@ class Search extends Component {
           value={this.state.search}
           onChange={e => this.setState({search: e.target.value})}
         />
-        <LocationContainer>
+        <ul>
           {
             this.state.locations.filter(location =>
               location.name.search(reExp) !== -1 ||
@@ -54,8 +54,8 @@ class Search extends Component {
                 </Location>
               )
           }
-        </LocationContainer>
-      </div>
+        </ul>
+      </SearchContainer>
     )
   }
 

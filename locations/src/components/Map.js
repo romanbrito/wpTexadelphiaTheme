@@ -3,15 +3,16 @@ import {compose, withProps, lifecycle, withHandlers} from 'recompose'
 import {withScriptjs, withGoogleMap, GoogleMap, Marker} from 'react-google-maps'
 import {MarkerClusterer} from 'react-google-maps/lib/components/addons/MarkerClusterer'
 import {googleMapURL} from '../utilities/constants'
-import {destination} from '../utilities/utilities';
-import Search from "./Search";
+import {destination} from '../utilities/utilities'
+import Search from './Search'
+import {LocationsContainer, MapContainer, MapElement} from './StyledMap'
 
 const MapComponent = compose(
   withProps({
     googleMapURL,
-    loadingElement: <div style={{height: `100%`, width: `50%`, position: `absolute`, top: 0, left: 0}}/>,
-    containerElement: <div style={{height: `71vh`}}/>,
-    mapElement: <div id="map" className="" style={{height: `100%`}}/>,
+    loadingElement: <section style={{height: `100%`, width: `50%`, position: `absolute`, top: 0, left: 0}}/>,
+    containerElement: <MapContainer/>,
+    mapElement: <MapElement id="map"/>,
   }),
   withHandlers({}),
   lifecycle({
@@ -38,7 +39,7 @@ const MapComponent = compose(
 )(props => {
 
   return (
-    <div>
+    <section>
       <GoogleMap
         ref={props.zoomToMarkers}
         defaultZoom={8}
@@ -58,16 +59,17 @@ const MapComponent = compose(
           ))}
         </MarkerClusterer>
       </GoogleMap>
-
-      <Search data={props.data}/>
-    </div>
+    </section>
   )
 })
 
 const Map = ({data}) => {
 
   return (
-    <MapComponent data={data}/>
+    <LocationsContainer>
+      <MapComponent data={data}/>
+      <Search data={data}/>
+    </LocationsContainer>
   )
 }
 
