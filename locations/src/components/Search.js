@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {distanceMatrix} from '../utilities/utilities'
-import {Location, SearchContainer} from './StyledSearch'
+import {Location, SearchContainer, SearchInput} from './StyledSearch'
 
 class Search extends Component {
   state = {
@@ -25,7 +25,7 @@ class Search extends Component {
 
     return (
       <SearchContainer>
-        <input
+        <SearchInput
           type="search"
           name="search"
           placeholder="Name, City, State"
