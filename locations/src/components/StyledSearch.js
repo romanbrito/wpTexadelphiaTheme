@@ -5,5 +5,5 @@ export const Location = styled.li`
 `
 
 export const SearchContainer = styled.div`
-  flex 1 0 50%;
+  flex 1 0 320px;
 `

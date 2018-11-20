@@ -6,8 +6,11 @@ export const LocationsContainer = styled.div`
 `
 
 export const MapContainer = styled.div`
-  height: 100vh;
-  flex: 1 0 50%;
+  height: 60vh;
+  flex: 7 0 320px;
+  @media screen and (min-width: 641px) {
+    height: 100vh;
+    }
 `
 
 export const MapElement = styled.div`
