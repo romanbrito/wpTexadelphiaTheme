@@ -28,6 +28,8 @@ export const SearchInput = styled.input`
 
 export const InputContainer = styled.div`
   display: flex;
+  position: sticky;
+  top: 0;
   `
 
 export const SVG = styled.svg`
