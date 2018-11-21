@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components'
 export const MenuContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   `
 
 export const MenuButton = styled.button`

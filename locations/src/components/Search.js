@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Menus from './Menus'
 import {distanceMatrix} from '../utilities/utilities'
-import {Location, SearchContainer, InputContainer, SearchInput, SVG, SearchIcon} from './StyledSearch'
+import {Location, SearchContainer, InputContainer, SearchInput, SVG, SearchIcon, InfoContainer} from './StyledSearch'
 
 class Search extends Component {
   state = {
@@ -54,15 +54,17 @@ class Search extends Component {
             )
               .map(list =>
                 <Location key={list.label}>
-                  <h4>{list.name}</h4>
-                  <p>{list.address}</p>
-                  <p>{list.city} {list.state} {list.zip}</p>
-                  <a href={`tel: ${list.phone}`}>T. {list.phone}</a>
-                  <p>{list.hours1}</p>
-                  <p>{list.hours2}</p>
-                  <p>{list.hours3}</p>
+                  <InfoContainer>
+                    <h4>{list.name}</h4>
+                    <p>{list.address}</p>
+                    <p>{list.city} {list.state} {list.zip}</p>
+                    <a href={`tel: ${list.phone}`}>T. {list.phone}</a>
+                    <p>{list.hours1}</p>
+                    <p>{list.hours2}</p>
+                    <p>{list.hours3}</p>
+                    {list.miles && <p>Distance: {list.miles} miles</p>}
+                  </InfoContainer>
                   <Menus/>
-                  {list.miles && <p>Distance: {list.miles} miles</p>}
                 </Location>
               )
           }

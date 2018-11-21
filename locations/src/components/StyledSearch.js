@@ -2,14 +2,20 @@ import styled from 'styled-components'
 
 export const Location = styled.li`
   list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 `
 
 export const SearchContainer = styled.div`
-  flex 1 0 320px;
+  flex 2 0 320px;
   overflow-y: scroll;
   overflow-x: hidden;
   height: 100vh;
 `
+
+export const InfoContainer = styled.div`
+  `
 
 export const SearchInput = styled.input`
   padding: .6em .8em;
