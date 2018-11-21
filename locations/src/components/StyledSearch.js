@@ -23,7 +23,7 @@ export const SearchInput = styled.input`
   text-decoration: none;
   line-height: normal;
   max-height: 3em;
-  width: 100%;
+  flex: 7 0 250px;
 `
 
 export const InputContainer = styled.div`
@@ -35,4 +35,9 @@ export const SVG = styled.svg`
   `
 
 export const SearchIcon = styled.span`
+  flex: 1 0 1em;
+  background: purple;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   `
