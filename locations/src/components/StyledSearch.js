@@ -1,10 +1,23 @@
 import styled from 'styled-components'
 
+export const SearchUl = styled.ul`
+  padding: 0;
+  
+  @media screen and (min-width: 640px) {
+    padding: 1em;
+    }
+  `
+
 export const Location = styled.li`
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
+  
+  @media screen and (min-width: 1150px) {
+    flex-wrap: nowrap;
+    }
 `
 
 export const SearchContainer = styled.div`
@@ -15,6 +28,8 @@ export const SearchContainer = styled.div`
 `
 
 export const InfoContainer = styled.div`
+  line-height: 0;
+  flex: 1 0 200px;
   `
 
 export const SearchInput = styled.input`

@@ -8,7 +8,7 @@ export const LocationsContainer = styled.div`
 export const MapContainer = styled.div`
   height: 50vh;
   flex: 5 0 320px;
-  @media screen and (min-width: 641px) {
+  @media screen and (min-width: 640px) {
     height: 100vh;
     }
 `

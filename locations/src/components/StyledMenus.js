@@ -4,6 +4,11 @@ export const MenuContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  flex: 1 0 200px;
+  
+  @media screen and (min-width: 1150px) {
+  width: unset;
+  }
   `
 
 export const MenuButton = styled.button`

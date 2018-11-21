@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Menus from './Menus'
 import {distanceMatrix} from '../utilities/utilities'
-import {Location, SearchContainer, InputContainer, SearchInput, SVG, SearchIcon, InfoContainer} from './StyledSearch'
+import {Location, SearchContainer, InputContainer, SearchInput, SVG, SearchIcon, InfoContainer, SearchUl} from './StyledSearch'
 
 class Search extends Component {
   state = {
@@ -43,7 +43,7 @@ class Search extends Component {
           </SVG>
         </SearchIcon>
         </InputContainer>
-        <ul>
+        <SearchUl>
           {
             this.state.locations.filter(location =>
               location.name.search(reExp) !== -1 ||
@@ -62,13 +62,13 @@ class Search extends Component {
                     <p>{list.hours1}</p>
                     <p>{list.hours2}</p>
                     <p>{list.hours3}</p>
-                    {list.miles && <p>Distance: {list.miles} miles</p>}
+                    {/*{list.miles && <p>Distance: {list.miles} miles</p>}*/}
                   </InfoContainer>
                   <Menus/>
                 </Location>
               )
           }
-        </ul>
+        </SearchUl>
       </SearchContainer>
     )
   }
