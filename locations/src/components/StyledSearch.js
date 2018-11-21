@@ -25,3 +25,14 @@ export const SearchInput = styled.input`
   max-height: 3em;
   width: 100%;
 `
+
+export const InputContainer = styled.div`
+  display: flex;
+  `
+
+export const SVG = styled.svg`
+  height: 1.5em;
+  `
+
+export const SearchIcon = styled.span`
+  `
