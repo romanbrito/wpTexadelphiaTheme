@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Menus from './Menus'
 import {distanceMatrix} from '../utilities/utilities'
 import {Location, SearchContainer, InputContainer, SearchInput, SVG, SearchIcon} from './StyledSearch'
 
@@ -60,6 +61,7 @@ class Search extends Component {
                   <p>{list.hours1}</p>
                   <p>{list.hours2}</p>
                   <p>{list.hours3}</p>
+                  <Menus/>
                   {list.miles && <p>Distance: {list.miles} miles</p>}
                 </Location>
               )
