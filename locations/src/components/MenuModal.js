@@ -1,19 +1,20 @@
 import React from 'react'
-import {ModalContainer, Modal, ModalHeader, ModalBody} from './StyledMenuModal'
+import {ModalContainer, Modal, ModalHeader, ModalBody, CloseButton, ModalH1, ModalH2} from './StyledMenuModal'
 
 const MenuModal = ({list, menuType, displayMenu}) =>
   <ModalContainer>
     <Modal>
       <ModalHeader>
-        Modal Header {list.name} {menuType}
-        <button
+        <ModalH2>{menuType} Menu</ModalH2>
+        <ModalH1>{list.name}</ModalH1>
+        <CloseButton
           onClick={displayMenu}
         >close
-        </button>
+        </CloseButton>
       </ModalHeader>
       <ModalBody>
         {window.innerWidth > 900 ?
-          menuType === 'house' ?
+          menuType === 'House' ?
             <object
               data={'https://www.texadelphia.com/wp-content/themes/texsite/pdf/House_' + list.label + '.pdf'}
               type="application/pdf" width="100%" height="100%">
@@ -35,7 +36,7 @@ const MenuModal = ({list, menuType, displayMenu}) =>
                      width="100%"/>)}
             </object>
           :
-          menuType === 'house' ?
+          menuType === 'House' ?
             list.houseMenuUrl.map(url =>
               <img key={url} src={'https://www.texadelphia.com/wp-content/themes/texsite/images/' + url + '.jpg'} alt="menu"
                    width="100%"/>)

@@ -16,10 +16,10 @@ class Menus extends Component {
     return (
       <MenuContainer>
         <MenuButton
-          onClick={e => this.displayMenu('house')}
+          onClick={e => this.displayMenu('House')}
         >Menu</MenuButton>
         <MenuButton
-          onClick={e => this.displayMenu('catering')}
+          onClick={e => this.displayMenu('Catering')}
         >Catering Menu</MenuButton>
         <MenuButton directions
                     onClick={e => window.open(destination(list.address, list.city, list.state, list.zip))}>
