@@ -1,9 +1,14 @@
 import React from 'react'
-import {Modal} from './StyledMenuModal'
+import {ModalContainer, Modal} from './StyledMenuModal'
 
-const MenuModal = ({list, menuType}) =>
-  <Modal>
-    {list.name} {menuType}
-  </Modal>
+const MenuModal = ({list, menuType, displayMenu}) =>
+  <ModalContainer>
+    <Modal>
+      {list.name} {menuType}
+      <button
+        onClick={displayMenu}
+      >close</button>
+    </Modal>
+  </ModalContainer>
 
 export default MenuModal

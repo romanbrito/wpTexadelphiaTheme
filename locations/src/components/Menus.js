@@ -26,7 +26,7 @@ class Menus extends Component {
           Directions
         </MenuButton>
 
-        {this.state.showMenu && <MenuModal list={list} menuType={this.state.menuType}/>}
+        {this.state.showMenu && <MenuModal list={list} menuType={this.state.menuType} displayMenu={this.displayMenu}/>}
 
       </MenuContainer>
     )
