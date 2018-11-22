@@ -18,3 +18,11 @@ export const Modal = styled.div`
   padding: 5% 0;
   background: white;
   `
+
+export const ModalHeader = styled.div`
+  width: 100%;
+  `
+export const ModalBody = styled.div`
+  width: 100%;
+  height: 100%;
+  `
