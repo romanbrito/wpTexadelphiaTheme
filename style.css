@@ -557,26 +557,14 @@ a {
   width: 100%; }
   .main-navigation .menu-main-navigation-container {
     position: fixed;
-    left: 0;
-    right: 0;
+    right: -30em;
     top: 0;
     bottom: 0;
+    width: 30em;
     justify-content: center;
     align-items: center;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.7); }
-    .main-navigation .menu-main-navigation-container .close-button {
-      cursor: pointer;
-      position: fixed;
-      right: 0;
-      top: 0;
-      border: none;
-      background: none;
-      color: white;
-      font-weight: 700;
-      font-size: 2em;
-      margin-top: .7em;
-      margin-right: 0; }
+    background-color: #1a1a1a;
+    transition: right 1s; }
     @media screen and (min-width: 500px) {
       .main-navigation .menu-main-navigation-container .close-button {
         margin-top: 1em;
@@ -620,7 +608,6 @@ a {
     display: block;
     text-decoration: none; }
 
-/* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul,
 .main-navigation ul {
@@ -631,7 +618,10 @@ a {
 .menu-toggle {
   margin-right: 1em;
   margin-left: 1em;
-  margin-top: 3em; }
+  margin-top: 3em;
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 @media screen and (min-width: 500px) {
   .menu-toggle {
@@ -655,6 +645,33 @@ a {
   float: right;
   text-align: right;
   width: 50%; }
+
+.close-button {
+  display: none;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2em;
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.reveal .menu-main-navigation-container {
+  right: 0; }
+
+.reveal .menu-toggle {
+  display: none; }
+
+.reveal .close-button {
+  display: block; }
+
+.menu-main-navigation-container ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*--------------------------------------------------------------
 # Accessibility

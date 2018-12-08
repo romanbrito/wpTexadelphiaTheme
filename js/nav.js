@@ -1,38 +1,29 @@
-var BUTTON = document.querySelector('.menu-toggle');
-var MENU_MAIN_NAVIGATION = document.querySelector('.menu-main-navigation-container');
-var FRONTPAGE_ARTICLE = document.querySelector('.frontpage-article');
+var SITE = document.querySelector('.site');
+var TRIGGER = document.querySelector('.menu-toggle');
+var REVEAL = document.querySelector('.menu-main-navigation-container');
 var CLOSE_BUTTON = document.createElement('BUTTON');
 CLOSE_BUTTON.innerHTML = 'X';
 CLOSE_BUTTON.classList.add('close-button');
-MENU_MAIN_NAVIGATION.appendChild(CLOSE_BUTTON);
+REVEAL.appendChild(CLOSE_BUTTON);
 
+// Toggle reveal class to site class
+function revealMenu() {
+  SITE.classList.toggle('reveal');
+  TRIGGER.getAttribute('aria-expanded') == 'false' ? TRIGGER.setAttribute('aria-expanded', true) : TRIGGER.setAttribute('aria-expanded', false);
+}
 
-BUTTON.addEventListener('click', function (e) {
- showButton();
- showMenu();
-});
-
-CLOSE_BUTTON.addEventListener('click', function (e) {
-  showButton();
-  showMenu();
-});
-
-function showMenu() {
-  if ( MENU_MAIN_NAVIGATION.style.display === 'flex') {
-    MENU_MAIN_NAVIGATION.style.display= 'none';
-    MENU_MAIN_NAVIGATION.classList.toggle('show-menu');
-    FRONTPAGE_ARTICLE.classList.toggle('show-frontpage-article');
-  } else {
-    MENU_MAIN_NAVIGATION.style.display= 'flex';
-    MENU_MAIN_NAVIGATION.classList.toggle('show-menu');
-    FRONTPAGE_ARTICLE.classList.toggle('show-frontpage-article');
+// Hide nave when click happens elsewhere
+function clickTarget(e) {
+  if ( TRIGGER.getAttribute('aria-expanded') == 'true' && !REVEAL.contains(e.target) ) {
+    revealMenu();
   }
 }
 
-function showButton() {
-  if ( BUTTON.style.display !== 'none') {
-    BUTTON.style.display= 'none';
-  } else {
-    BUTTON.style.display= 'block';
-  }
-}
+// Listen for clicks on TRIGGER button
+TRIGGER.addEventListener('click', revealMenu, false);
+CLOSE_BUTTON.addEventListener('click', revealMenu, false);
+
+// Listen for clicks
+SITE.addEventListener('click', function (e) {
+  clickTarget(e);
+}, true);
