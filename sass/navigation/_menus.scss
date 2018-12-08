@@ -12,7 +12,8 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: hsl(0, 0%, 10%);
+    background-color: white;
+    opacity: .8;
     transition: right 1s;
 
     ul {
@@ -78,7 +79,7 @@
   cursor: pointer;
   border: none;
   background: none;
-  color: white;
+  color: #c80000;
   font-weight: 700;
   font-size: 2em;
   position: absolute;

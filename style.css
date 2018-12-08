@@ -563,7 +563,8 @@ a {
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: #1a1a1a;
+    background-color: white;
+    opacity: .8;
     transition: right 1s; }
     .main-navigation .menu-main-navigation-container ul {
       height: 100%;
@@ -607,7 +608,7 @@ a {
   cursor: pointer;
   border: none;
   background: none;
-  color: white;
+  color: #c80000;
   font-weight: 700;
   font-size: 2em;
   position: absolute;
