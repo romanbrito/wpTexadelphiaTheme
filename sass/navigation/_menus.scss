@@ -6,18 +6,27 @@
 
   .menu-main-navigation-container {
     position: fixed;
-    right: -30em;
+    right: -100%;
     top: 0;
     bottom: 0;
-    width: 30em;
+    width: 100%;
     justify-content: center;
     align-items: center;
-    //display: none;
-    //background-color: rgba( 0, 0, 0, .7);
     background-color: hsl(0, 0%, 10%);
     transition: right 1s;
 
+    ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
     @media screen and (min-width: 500px) {
+      width: 30em;
+      right: -30em;
+
       .close-button {
         margin-top: 1em;
         margin-right: 1em;
@@ -26,67 +35,13 @@
 
   }
 
-  .show-menu {
-    animation: backgroundChange .4s;
-  }
-
-  @keyframes backgroundChange {
-    from {
-      background-color: rgba(0, 0, 0, .1);
-    }
-    to {
-      background-color: rgba(0, 0, 0, .7);
-    }
-  }
-
   ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0;
-
-    ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999;
-
-      ul {
-        left: -999em;
-        top: 0;
-      }
-
-      li {
-        &:hover > ul,
-        &.focus > ul {
-          left: 100%;
-        }
-      }
-
-      a {
-        width: 200px;
-      }
-
-      :hover > a,
-      .focus > a {
-      }
-
-      a:hover,
-      a.focus {
-      }
-    }
-
-    li:hover > ul,
-    li.focus > ul {
-      left: auto;
-    }
   }
 
   li {
-    //float: left;
-    position: relative;
     font-size: 2em;
     font-weight: 700;
 
@@ -100,19 +55,6 @@
     text-decoration: none;
   }
 
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a,
-  .current-menu-ancestor > a {
-  }
-}
-
-.menu-toggle,
-.main-navigation.toggled ul,
-.main-navigation ul {
-  display: block;
-  cursor: pointer;
-  text-align: center;
 }
 
 .menu-toggle {
@@ -122,32 +64,12 @@
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 500px) {
   .menu-toggle {
     margin-right: 4em;
-  }
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-  .site-main & {
-    margin: 0 0 1.5em;
-    overflow: hidden;
-  }
-
-  .nav-previous {
-    float: left;
-    width: 50%;
-  }
-
-  .nav-next {
-    float: right;
-    text-align: right;
-    width: 50%;
   }
 }
 
@@ -174,11 +96,4 @@
 
 .reveal .close-button {
   display: block;
-}
-
-.menu-main-navigation-container ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

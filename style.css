@@ -557,63 +557,37 @@ a {
   width: 100%; }
   .main-navigation .menu-main-navigation-container {
     position: fixed;
-    right: -30em;
+    right: -100%;
     top: 0;
     bottom: 0;
-    width: 30em;
+    width: 100%;
     justify-content: center;
     align-items: center;
     background-color: #1a1a1a;
     transition: right 1s; }
+    .main-navigation .menu-main-navigation-container ul {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
     @media screen and (min-width: 500px) {
-      .main-navigation .menu-main-navigation-container .close-button {
-        margin-top: 1em;
-        margin-right: 1em; } }
-  .main-navigation .show-menu {
-    animation: backgroundChange .4s; }
-
-@keyframes backgroundChange {
-  from {
-    background-color: rgba(0, 0, 0, 0.1); }
-  to {
-    background-color: rgba(0, 0, 0, 0.7); } }
+      .main-navigation .menu-main-navigation-container {
+        width: 30em;
+        right: -30em; }
+        .main-navigation .menu-main-navigation-container .close-button {
+          margin-top: 1em;
+          margin-right: 1em; } }
   .main-navigation ul {
-    display: none;
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999; }
-      .main-navigation ul ul ul {
-        left: -999em;
-        top: 0; }
-      .main-navigation ul ul li:hover > ul,
-      .main-navigation ul ul li.focus > ul {
-        left: 100%; }
-      .main-navigation ul ul a {
-        width: 200px; }
-    .main-navigation ul li:hover > ul,
-    .main-navigation ul li.focus > ul {
-      left: auto; }
   .main-navigation li {
-    position: relative;
     font-size: 2em;
     font-weight: 700; }
   .main-navigation a {
     display: block;
     text-decoration: none; }
-
-.menu-toggle,
-.main-navigation.toggled ul,
-.main-navigation ul {
-  display: block;
-  cursor: pointer;
-  text-align: center; }
 
 .menu-toggle {
   margin-right: 1em;
@@ -621,30 +595,12 @@ a {
   margin-top: 3em;
   position: absolute;
   top: 0;
-  right: 0; }
+  right: 0;
+  cursor: pointer; }
 
 @media screen and (min-width: 500px) {
   .menu-toggle {
     margin-right: 4em; } }
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-  margin: 0 0 1.5em;
-  overflow: hidden; }
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%; }
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%; }
 
 .close-button {
   display: none;
@@ -666,12 +622,6 @@ a {
 
 .reveal .close-button {
   display: block; }
-
-.menu-main-navigation-container ul {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; }
 
 /*--------------------------------------------------------------
 # Accessibility
