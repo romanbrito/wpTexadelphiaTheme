@@ -168,8 +168,8 @@
       "state": "OK",
       "zip": "73104",
       "phone": "405-208-4000",
-      "hours1": "Sun-Thur 10:30am - 10pm",
-      "hours2": "Fri-Sat 10:30am - 11pm",
+      "hours1": "Sun-Thur 11am - 9pm",
+      "hours2": "Fri-Sat 11am - 10pm",
       "hours3": "",
       "place_id": "",
       "label": "BR",
@@ -279,26 +279,6 @@
       },
       "houseMenuUrl": ["House_GV"],
       "cateringMenuUrl": ["Catering_GV"]
-    },
-    {
-      "id": "denton",
-      "name": "Denton",
-      "address": "1120 West Hickory",
-      "city": "Denton",
-      "state": "TX",
-      "zip": "76201",
-      "phone": "940-514-1067",
-      "hours1": "Sun-Wed 11am - 10pm",
-      "hours2": "Thur-Sat 11am - midnight",
-      "hours3": "",
-      "place_id": "",
-      "label": "DN",
-      "coordinates": {
-        "lat": 33.214837,
-        "lng": -97.145049
-      },
-      "houseMenuUrl": ["House_DN"],
-      "cateringMenuUrl": ["Catering_DN"]
     }
   ]
 }
