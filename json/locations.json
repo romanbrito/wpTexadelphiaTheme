@@ -17,12 +17,8 @@
         "lat": 30.474465,
         "lng": -97.801183
       },
-      "houseMenuUrl": [
-        "House_LL"
-      ],
-      "cateringMenuUrl": [
-        "Catering_LL"
-      ]
+      "houseMenuUrl": ["House_LL"],
+      "cateringMenuUrl": ["Catering_LL"]
     },
     {
       "id": "sunset",
@@ -41,13 +37,8 @@
         "lat": 30.228924,
         "lng": -97.822714
       },
-      "houseMenuUrl": [
-        "House_SS-1",
-        "House_SS-2"
-      ],
-      "cateringMenuUrl": [
-        "Catering_SS"
-      ]
+      "houseMenuUrl": ["House_SS-1", "House_SS-2"],
+      "cateringMenuUrl": ["Catering_SS"]
     },
     {
       "id": "frisco-warren-pkwy",
@@ -66,12 +57,8 @@
         "lat": 33.106217,
         "lng": -96.824965
       },
-      "houseMenuUrl": [
-        "House_FR"
-      ],
-      "cateringMenuUrl": [
-        "Catering_FR"
-      ]
+      "houseMenuUrl": ["House_FR"],
+      "cateringMenuUrl": ["Catering_FR"]
     },
     {
       "id": "las-colinas",
@@ -90,16 +77,12 @@
         "lat": 32.909483,
         "lng": -96.959442
       },
-      "houseMenuUrl": [
-        "House_CO"
-      ],
-      "cateringMenuUrl": [
-        "Catering_CO"
-      ]
+      "houseMenuUrl": ["House_CO"],
+      "cateringMenuUrl": ["Catering_CO"]
     },
     {
       "id": "old-town",
-      "name": "Old Town",
+      "name":  "Old Town",
       "address": "5500 Greenville Ave #600",
       "city": "Dallas",
       "state": "TX",
@@ -114,12 +97,8 @@
         "lat": 32.853438,
         "lng": -96.768555
       },
-      "houseMenuUrl": [
-        "House_OT"
-      ],
-      "cateringMenuUrl": [
-        "Catering_OT"
-      ]
+      "houseMenuUrl": ["House_OT"],
+      "cateringMenuUrl": ["Catering_OT"]
     },
     {
       "id": "plano",
@@ -138,12 +117,8 @@
         "lat": 33.053774,
         "lng": -96.796717
       },
-      "houseMenuUrl": [
-        "House_PL"
-      ],
-      "cateringMenuUrl": [
-        "Catering_PL"
-      ]
+      "houseMenuUrl": ["House_PL"],
+      "cateringMenuUrl": ["Catering_PL"]
     },
     {
       "id": "richardson",
@@ -162,12 +137,8 @@
         "lat": 32.949224,
         "lng": -96.736778
       },
-      "houseMenuUrl": [
-        "House_RI"
-      ],
-      "cateringMenuUrl": [
-        "Catering_RI"
-      ]
+      "houseMenuUrl": ["House_RI"],
+      "cateringMenuUrl": ["Catering_RI"]
     },
     {
       "id": "arlington-uta-campus",
@@ -186,12 +157,8 @@
         "lat": 32.732301,
         "lng": -97.108553
       },
-      "houseMenuUrl": [
-        "House_UTA"
-      ],
-      "cateringMenuUrl": [
-        "Catering_UTA"
-      ]
+      "houseMenuUrl": ["House_UTA"],
+      "cateringMenuUrl": ["Catering_UTA"]
     },
     {
       "id": "okc",
@@ -210,14 +177,8 @@
         "lat": 35.46395,
         "lng": -97.510094
       },
-      "houseMenuUrl": [
-        "House_BR-1",
-        "House_BR-2"
-      ],
-      "cateringMenuUrl": [
-        "Catering_BR-1",
-        "Catering_BR-2"
-      ]
+      "houseMenuUrl": ["House_BR-1", "House_BR-2"],
+      "cateringMenuUrl": ["Catering_BR-1", "Catering_BR-2"]
     },
     {
       "id": "laredo",
@@ -236,12 +197,8 @@
         "lat": 27.575264,
         "lng": -99.471407
       },
-      "houseMenuUrl": [
-        "House_LR"
-      ],
-      "cateringMenuUrl": [
-        "Catering_LR"
-      ]
+      "houseMenuUrl": ["House_LR"],
+      "cateringMenuUrl": ["Catering_LR"]
     },
     {
       "id": "mcallen",
@@ -260,12 +217,8 @@
         "lat": 26.194533,
         "lng": -98.205324
       },
-      "houseMenuUrl": [
-        "House_MC"
-      ],
-      "cateringMenuUrl": [
-        "Catering_MC"
-      ]
+      "houseMenuUrl": ["House_MC"],
+      "cateringMenuUrl": ["Catering_MC"]
     },
     {
       "id": "houston-westheimer",
@@ -284,12 +237,8 @@
         "lat": 29.7368233,
         "lng": -95.513883
       },
-      "houseMenuUrl": [
-        "House_WE"
-      ],
-      "cateringMenuUrl": [
-        "Catering_WE"
-      ]
+      "houseMenuUrl": ["House_WE"],
+      "cateringMenuUrl": ["Catering_WE"]
     },
     {
       "id": "houston-montrose",
@@ -308,12 +257,8 @@
         "lat": 29.741989,
         "lng": -95.390652
       },
-      "houseMenuUrl": [
-        "House_ME"
-      ],
-      "cateringMenuUrl": [
-        "Catering_ME"
-      ]
+      "houseMenuUrl": ["House_ME"],
+      "cateringMenuUrl": ["Catering_ME"]
     },
     {
       "id": "galveston",
@@ -323,8 +268,8 @@
       "state": "TX",
       "zip": "77550",
       "phone": "409-497-2953",
-      "hours1": "Coming Soon!",
-      "hours2": "",
+      "hours1": "Sun-Thur 11am - 10pm",
+      "hours2": "Fri-Sat 11am - 11pm",
       "hours3": "",
       "place_id": "",
       "label": "GV",
@@ -332,12 +277,8 @@
         "lat": 29.298113,
         "lng": -94.778586
       },
-      "houseMenuUrl": [
-        "House_GV"
-      ],
-      "cateringMenuUrl": [
-        "Catering_GV"
-      ]
+      "houseMenuUrl": ["House_GV"],
+      "cateringMenuUrl": ["Catering_GV"]
     }
   ]
 }
