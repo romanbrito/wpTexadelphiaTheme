@@ -77,7 +77,7 @@
         "lat": 32.909483,
         "lng": -96.959442
       },
-      "houseMenuUrl": ["House_CO"],
+      "houseMenuUrl": ["House_CO-1","House_CO-2"],
       "cateringMenuUrl": ["Catering_CO"]
     },
     {
@@ -97,7 +97,7 @@
         "lat": 32.853438,
         "lng": -96.768555
       },
-      "houseMenuUrl": ["House_OT"],
+      "houseMenuUrl": ["House_OT-1","House_OT-2"],
       "cateringMenuUrl": ["Catering_OT"]
     },
     {
@@ -137,7 +137,7 @@
         "lat": 32.949224,
         "lng": -96.736778
       },
-      "houseMenuUrl": ["House_RI-1","House_RI-2","House_RI-3","House_RI-4"],
+      "houseMenuUrl": ["House_RI-1","House_RI-2"],
       "cateringMenuUrl": ["Catering_RI"]
     },
     {
@@ -157,7 +157,7 @@
         "lat": 32.732301,
         "lng": -97.108553
       },
-      "houseMenuUrl": ["House_RI-1","House_RI-2","House_RI-3","House_RI-4"],
+      "houseMenuUrl": ["House_UTA-1","House_UTA-2"],
       "cateringMenuUrl": ["Catering_UTA"]
     },
     {
@@ -237,7 +237,7 @@
         "lat": 29.7368233,
         "lng": -95.513883
       },
-      "houseMenuUrl": ["House_WE"],
+      "houseMenuUrl": ["House_WE-1","House_WE-2"],
       "cateringMenuUrl": ["Catering_WE"]
     },
     {
@@ -257,7 +257,7 @@
         "lat": 29.741989,
         "lng": -95.390652
       },
-      "houseMenuUrl": ["House_ME"],
+      "houseMenuUrl": ["House_ME-1","House_ME-2"],
       "cateringMenuUrl": ["Catering_ME"]
     },
     {
