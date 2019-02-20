@@ -114,14 +114,44 @@
         height: 0;
     }
 
+    .menu {
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        width: 100%;
+        right: -100%;
+        transition: right 1s ease-in;
+    }
+
+    .menu-item {
+        list-style: none;
+    }
+
     .menu-toggle {
         background: white;
+        opacity: .5;
         border: none;
         cursor: pointer;
     }
-    
+
     .menu-icon {
         color: #1e4130;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
+    .reveal .close-menu {
+        display: block;
+    }
+
+    .reveal .menu-icon {
+        display: none;
+    }
+
+    .reveal .menu {
+        right: 0;
     }
 
     /*not small screens*/
@@ -157,17 +187,33 @@
     <div class="logo">
         <img src="./images/TexadelphiaLogo.png" alt="Texadelphia Logo">
     </div>
-    <div class="nav">
+    <nav class="nav">
         <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
             <svg fill="currentColor" preserveAspectRatio="xMidYMid meet" height="27" width="27" viewBox="0 0 40 40"
-                 style="vertical-align: middle; color: rgb(255, 255, 255);">
-                <g class="menu-icon">
+                 style="vertical-align: middle;" class="menu-icon">
+                <g>
                     <path d="m5 10h30v3.4h-30v-3.4z m0 11.6v-3.2h30v3.2h-30z m0 8.4v-3.4h30v3.4h-30z"></path>
                 </g>
             </svg>
-            <span class="close-menu dont-show">X</span>
+            <span class="close-menu">X</span>
         </button>
-    </div>
+        <ul id="primary-menu" class="menu">
+            <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a
+                    href="http://texadelphia.test/about-us/">About Us</a></li>
+            <li id="menu-item-170" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-170"><a
+                    href="http://texadelphia.test/contact-us/">Contact Us</a></li>
+            <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a
+                    href="http://texadelphia.test/franchising/">Franchising</a></li>
+            <li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a
+                    href="http://texadelphia.test/locations-menu/">Locations Menu</a></li>
+            <li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a
+                    href="http://texadelphia.test/news/">News</a></li>
+            <li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a
+                    href="http://texadelphia.test/texnation-loyalty-program/">Texnation Loyalty Program</a></li>
+            <li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a
+                    href="http://texadelphia.test/we-cater/">We Cater</a></li>
+        </ul>
+    </nav>
 
     <div class="horizontal-scroll">
         <section class="slides">
@@ -232,6 +278,19 @@
     slide = slide - 1 < 0 ? NUMBER_OF_SLIDES - 1 : slide - 1;
     SLIDES.style.transform = 'translate3d(-' + slide + '00%, 0px, 0px)';
   });
+
+//  navigation
+  const TRIGGER = document.querySelector('.menu-toggle');
+  const SITE = document.querySelector('.scroll-container');
+
+  function revealMenu() {
+    SITE.classList.toggle('reveal');
+    TRIGGER.getAttribute('aria-expanded') == 'false' ? TRIGGER.setAttribute('aria-expanded', true) : TRIGGER.setAttribute('aria-expanded', false);
+  }
+
+  // Listen for clicks on TRIGGER button
+  TRIGGER.addEventListener('click', revealMenu, false);
+
 </script>
 </body>
 </html>
