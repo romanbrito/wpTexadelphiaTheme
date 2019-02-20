@@ -35,7 +35,7 @@
     .slides {
         display: flex;
         grid-area: main;
-        transform: translate3d(-100%, 0px, 0px);
+        /*transform: translate3d(-100%, 0px, 0px);*/
         transition: transform .3s ease-in;
 
         height: 100%;
@@ -106,13 +106,19 @@
   const CHEVRON_LEFT = document.querySelector('.chevron-left');
   const CHEVRON_RIGHT = document.querySelector('.chevron-right');
   const SLIDES = document.querySelector('.slides');
+  const NUMBER_OF_SLIDES = 4;
+
+  var slide = 0;
 
   CHEVRON_RIGHT.addEventListener('click', function (e) {
-    SLIDES.style.transform = 'translate3d(-200%, 0px, 0px)';
+    slide = slide + 1 > NUMBER_OF_SLIDES - 1 ? 0: slide + 1;
+
+    SLIDES.style.transform = 'translate3d(-' + slide + '00%, 0px, 0px)';
   });
 
   CHEVRON_LEFT.addEventListener('click', function (e) {
-    SLIDES.style.transform = 'translate3d(0px, 0px, 0px)';
+    slide = slide - 1 < 0 ? NUMBER_OF_SLIDES - 1: slide - 1;
+    SLIDES.style.transform = 'translate3d(-' + slide + '00%, 0px, 0px)';
   });
 </script>
 </body>
