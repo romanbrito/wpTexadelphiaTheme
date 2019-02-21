@@ -34,7 +34,7 @@
         display: grid;
         grid-template-areas: "main";
         max-width: 1920px;
-        max-height: 1080px;
+        /*max-height: 1080px;*/
         height: 100vh;
         margin: 0 auto;
     }
@@ -129,10 +129,24 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
+
+        background-color: rgba(0,0,0,.7);
     }
 
-    .menu-item {
+    .menu-item, .menu-item-footer {
         list-style: none;
+    }
+
+    .menu-item a {
+        text-decoration: none;
+        color: white;
+        font-size: 3rem;
+    }
+
+    .menu-item-footer a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
     }
 
     .menu-toggle {
@@ -158,6 +172,11 @@
         padding-top: .4rem;
     }
 
+    .site-info {
+        grid-area: main;
+        display: none;
+    }
+
     .reveal .nav {
         margin: 0;
         /*height: 100%;*/
@@ -176,6 +195,9 @@
         opacity: 1;
     }
 
+    .reveal .frontpage-article {
+        display: none;
+    }
     /*not small screens*/
     @media (min-width: 455px) {
         .logo {
@@ -193,6 +215,21 @@
         .nav {
             /*margin: 20px 20px 0 auto;*/
             padding: 2rem;
+        }
+
+        .site-info {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .site-footer {
+            display: flex;
+            z-index: 1;
+        }
+
+        .menu-item-footer {
+            margin: 1rem;
         }
 
         .reveal .menu {
@@ -232,16 +269,15 @@
             <li id="menu-item-172" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-172"><a
                     href="http://texadelphia.test/franchising/">Franchising</a></li>
             <li id="menu-item-179" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a
-                    href="http://texadelphia.test/locations-menu/">Locations Menu</a></li>
+                    href="http://texadelphia.test/locations-menu/">Locations/Menu</a></li>
             <li id="menu-item-181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-181"><a
                     href="http://texadelphia.test/news/">News</a></li>
             <li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a
-                    href="http://texadelphia.test/texnation-loyalty-program/">Texnation Loyalty Program</a></li>
+                    href="http://texadelphia.test/texnation-loyalty-program/">Texnation</a></li>
             <li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-189"><a
                     href="http://texadelphia.test/we-cater/">We Cater</a></li>
         </ul>
     </nav>
-
     <div class="horizontal-scroll">
         <section class="slides">
             <figure class="slide">
@@ -285,7 +321,15 @@
                   d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"></path>
         </svg>
     </div>
+    <div class="site-info">
+        <!--        new footer-->
+        <ul class="site-footer">
+            <li class="menu-item-footer"><a href="">Sitemap</a></li>
+            <li class="menu-item-footer"><a href="">Privacy Policy</a></li>
+            <li class="menu-item-footer copyright"><a>© 2018 Texadelphia Franchising, LLC</a></li>
+        </ul>
 
+    </div>
 </div>
 <script>
   const CHEVRON_LEFT = document.querySelector('.chevron-left');
