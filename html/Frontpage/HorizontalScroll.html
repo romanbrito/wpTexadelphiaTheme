@@ -30,7 +30,7 @@
     }
 
     .scroll-container {
-        overflow-x: hidden;
+        overflow: hidden;
         display: grid;
         grid-template-areas: "main";
         max-width: 1920px;
@@ -130,7 +130,7 @@
         justify-content: space-evenly;
         align-items: center;
 
-        background-color: rgba(0,0,0,.7);
+        background-color: rgba(0, 0, 0, .7);
     }
 
     .menu-item, .menu-item-footer {
@@ -193,10 +193,13 @@
         cursor: pointer;
         z-index: 2;
         text-align: center;
+        background-color: rgba(0, 0, 0, .5);
     }
+
     .article-container, .large {
         display: none;
     }
+
     .reveal .nav {
         margin: 0;
         /*height: 100%;*/
@@ -218,9 +221,17 @@
     .reveal .frontpage-article {
         display: none;
     }
-
-    .reveal .article-button {
+    /*show one article, hide the rest*/
+    .article-active .article-button{
         display: none;
+    }
+
+    .article-button.show-article {
+        display: block;
+    }
+    .article-container.show-article {
+        display: block;
+        z-index: 2;
     }
 
     /*not small screens*/
@@ -351,7 +362,8 @@
                 favorite sandwich, but served it with a Texas twist. Texadelphia first opened in 1981 in Austin,
                 Texas.
                 After a few years, Texadelphia restaurants began popping up all across Texas and even Oklahoma.</p>
-            <button class="close-article-button">CLOSE</button></article>
+            <button class="close-article-button">CLOSE</button>
+        </article>
         <h2 class="article-button"><span class="large">The Texadelphia </span>Difference</h2>
         <article class="article-container">
             <p class="difference">We start with the highest quality, fresh ingredients. We make each and every
@@ -363,7 +375,8 @@
                 do
                 it.
                 It’s our passion. Texadelphia. Inspired By Philly …Perfected in Texas!</p>
-            <button class="close-article-button">CLOSE</button></article>
+            <button class="close-article-button">CLOSE</button>
+        </article>
         <h2 class="article-button">Locations</h2>
     </div>
     <div class="chevron-container">
@@ -389,6 +402,7 @@
     </div>
 </div>
 <script>
+  //    Slideshow
   const CHEVRON_LEFT = document.querySelector('.chevron-left');
   const CHEVRON_RIGHT = document.querySelector('.chevron-right');
   const SLIDES = document.querySelector('.slides');
@@ -407,7 +421,7 @@
     SLIDES.style.transform = 'translate3d(-' + slide + '00%, 0px, 0px)';
   });
 
-//  navigation
+  //  navigation
   const TRIGGER = document.querySelector('.menu-toggle');
   const SITE = document.querySelector('.scroll-container');
 
@@ -418,6 +432,28 @@
 
   // Listen for clicks on TRIGGER button
   TRIGGER.addEventListener('click', revealMenu, false);
+
+  //  Articles
+  const ARTICLES = document.querySelector('.frontpage-secondary');
+  const ARTICLE_BUTTON = document.querySelectorAll('.article-button');
+  for (var i = 0; i < ARTICLE_BUTTON.length; i++) {
+    ARTICLE_BUTTON[i].addEventListener('click', function (e) {
+      ARTICLES.classList.add('article-active');
+
+      const ARTICLE_BUTTON = e.currentTarget;
+      ARTICLE_BUTTON.classList.add('show-article');
+
+      const ARTICLE = ARTICLE_BUTTON.nextElementSibling;
+      ARTICLE.classList.add('show-article');
+
+      const CLOSE_BUTTON = ARTICLE.querySelector('.close-article-button');
+      CLOSE_BUTTON.addEventListener('click', function (e) {
+        ARTICLES.classList.remove('article-active');
+        ARTICLE_BUTTON.classList.remove('show-article');
+        ARTICLE.classList.remove('show-article');
+      })
+    });
+  }
 
 </script>
 </body>
