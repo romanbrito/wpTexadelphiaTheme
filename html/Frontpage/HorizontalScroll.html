@@ -177,6 +177,26 @@
         display: none;
     }
 
+    .frontpage-secondary {
+        grid-area: main;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        height: 93%;
+    }
+
+    .article-button {
+        color: white;
+        border: white 1px solid;
+        padding: .5rem;
+        border-radius: 2rem;
+        cursor: pointer;
+        z-index: 2;
+        text-align: center;
+    }
+    .article-container, .large {
+        display: none;
+    }
     .reveal .nav {
         margin: 0;
         /*height: 100%;*/
@@ -198,6 +218,11 @@
     .reveal .frontpage-article {
         display: none;
     }
+
+    .reveal .article-button {
+        display: none;
+    }
+
     /*not small screens*/
     @media (min-width: 455px) {
         .logo {
@@ -230,6 +255,10 @@
 
         .menu-item-footer {
             margin: 1rem;
+        }
+
+        .large {
+            display: block;
         }
 
         .reveal .menu {
