@@ -43,6 +43,7 @@
         grid-area: main;
         z-index: 1;
         margin: 0 auto;
+        padding: 10px;
     }
 
     .logo img {
@@ -95,6 +96,7 @@
         align-items: center;
         max-width: 300px;
         margin: 0 auto;
+        height: 80%;
     }
 
     .frontpage-article h1 {
@@ -124,7 +126,7 @@
         transition: opacity .3s ease-in;
         opacity: 0;
 
-        height: 100%;
+        height: 90%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -221,6 +223,10 @@
     .reveal .frontpage-article {
         display: none;
     }
+
+    .reveal .frontpage-secondary {
+        display: none;
+    }
     /*show one article, hide the rest*/
     .article-active .article-button{
         display: none;
@@ -232,16 +238,28 @@
     .article-container.show-article {
         display: block;
         z-index: 2;
+        font-size: 20px;
+        text-align: justify;
     }
 
     .frontpage-secondary.article-active {
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        background-color: white;
+        z-index: 2;
+        padding: 10%;
+        height: 100%;
+
+        max-width: 1200px;
+        margin: 0 auto;
     }
+
     /*not small screens*/
     @media (min-width: 455px) {
         .logo {
             margin: 0;
+            padding: 2rem;
         }
 
         .frontpage-article {
@@ -274,6 +292,11 @@
 
         .large {
             display: block;
+        }
+
+        .article-container.show-article {
+            max-width: 455px;
+            font-size: 25px;
         }
 
         .reveal .menu {
