@@ -227,14 +227,23 @@
     .reveal .frontpage-secondary {
         display: none;
     }
+
+    .close-article-button {
+        background: none;
+        border: 1px solid black;
+        padding: 1rem;
+        cursor: pointer;
+    }
+
     /*show one article, hide the rest*/
-    .article-active .article-button{
+    .article-active .article-button {
         display: none;
     }
 
     .article-button.show-article {
         display: block;
     }
+
     .article-container.show-article {
         display: block;
         z-index: 2;
@@ -242,7 +251,7 @@
         text-align: justify;
     }
 
-    .frontpage-secondary.article-active {
+    .article-active .frontpage-secondary {
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -253,6 +262,10 @@
 
         max-width: 1200px;
         margin: 0 auto;
+    }
+
+    .article-active .nav, .article-active .chevron-container, .article-active .site-info {
+        display: none;
     }
 
     /*not small screens*/
@@ -463,9 +476,10 @@
   //  Articles
   const ARTICLES = document.querySelector('.frontpage-secondary');
   const ARTICLE_BUTTON = document.querySelectorAll('.article-button');
+
   for (var i = 0; i < ARTICLE_BUTTON.length; i++) {
     ARTICLE_BUTTON[i].addEventListener('click', function (e) {
-      ARTICLES.classList.add('article-active');
+      SITE.classList.add('article-active');
 
       const ARTICLE_BUTTON = e.currentTarget;
       ARTICLE_BUTTON.classList.add('show-article');
@@ -475,12 +489,26 @@
 
       const CLOSE_BUTTON = ARTICLE.querySelector('.close-article-button');
       CLOSE_BUTTON.addEventListener('click', function (e) {
-        ARTICLES.classList.remove('article-active');
+        SITE.classList.remove('article-active');
         ARTICLE_BUTTON.classList.remove('show-article');
         ARTICLE.classList.remove('show-article');
       })
     });
   }
+
+  // Close article if clicked anywhere else
+  SITE.addEventListener('click', function (e) {
+    if (SITE.classList.contains('article-active')) {
+      const clickOutside = document.querySelector('.logo');
+      const currentArticleButton = document.querySelector('.article-button.show-article');
+      const currentArticle = currentArticleButton.nextElementSibling;
+      if (e.target === clickOutside) {
+        SITE.classList.remove('article-active');
+        currentArticleButton.classList.remove('show-article');
+        currentArticle.classList.remove('show-article');
+      }
+    }
+  })
 
 </script>
 </body>
