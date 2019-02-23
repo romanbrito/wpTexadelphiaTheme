@@ -58,7 +58,7 @@
         "lng": -96.824965
       },
       "houseMenuUrl": ["House_FR-1","House_FR-2","House_FR-3","House_FR-4"],
-      "cateringMenuUrl": ["Catering_FR"]
+      "cateringMenuUrl": ["Catering_FR-1", "Catering_FR-2"]
     },
     {
       "id": "las-colinas",
@@ -118,7 +118,7 @@
         "lng": -96.796717
       },
       "houseMenuUrl": ["House_FR-1","House_FR-2","House_FR-3","House_FR-4"],
-      "cateringMenuUrl": ["Catering_PL"]
+      "cateringMenuUrl": ["Catering_PL-1", "Catering_PL-2"]
     },
     {
       "id": "richardson",
