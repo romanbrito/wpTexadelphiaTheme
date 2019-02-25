@@ -2,6 +2,17 @@
 
 /* Document
 	 ========================================================================== */
+/**
+ * 1. us border-box box sizing
+ */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 
 /**
  * 1. Correct the line height in all browsers.

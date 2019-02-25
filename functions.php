@@ -139,6 +139,12 @@ function texadelphia_scripts() {
 
     wp_enqueue_script( 'texadelphia-contact', get_template_directory_uri() . '/js/contact.js', array(), '20181102', true );
 
+    wp_enqueue_script( 'texadelphia-locations', get_template_directory_uri() . '/js/reactScript.js', array(), '20190224', true );
+    wp_enqueue_script( 'texadelphia-locations1', get_template_directory_uri() . '/js/2.72a22b1b.chunk', array(), '20190224', true );
+    wp_enqueue_script( 'texadelphia-locations2', get_template_directory_uri() . '/js/main.309bd572.chunk.js', array(), '20190224', true );
+
+
+
 	wp_enqueue_script( 'texadelphia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

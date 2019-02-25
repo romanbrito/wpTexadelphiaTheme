@@ -1,40 +1,13 @@
 .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-column: 1/2;
-  grid-row: 1/2;
-  z-index: 3;
+  z-index: 1;
+  display: grid;
+  grid-template-areas: "header";
+
+  .site-branding {
+    grid-area: header;
+  }
 
   .main-navigation {
-    width: auto;
+    grid-area: header;
   }
-
-  //content none to avoid breaking flex
-  &::before,
-  &::after {
-    content: none;
-  }
-
-  // navigation
-  .menu-item {
-    padding: 1rem;
-
-    a {
-      color: #c80000;
-    }
-    a:visited {
-      color: #c80000;
-    }
-    a:hover, a:focus, a:active {
-      color: #c80000;
-    }
-    a:focus {
-      outline: 0;
-    }
-    a:hover, a:active {
-      outline: 0;
-    }
-  }
-
 }

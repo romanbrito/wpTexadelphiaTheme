@@ -1,12 +1,12 @@
-.frontpage-container {
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 25%;
-}
-
-@media screen and (min-width: 768px) {
-  .frontpage-container {
-    grid-template-rows: 1fr 13%;
-  }
-}
+/*--------------------------------------------------------------
+## Main area
+--------------------------------------------------------------*/
+@import "main";
+/*--------------------------------------------------------------
+## Horizontal Scroll
+--------------------------------------------------------------*/
+@import "scroll";
+/*--------------------------------------------------------------
+## Frontpage Articles
+--------------------------------------------------------------*/
+@import "articles";

@@ -1,100 +1,61 @@
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+
+
+  .menu-icon {
+    color: #1e4130;
+    height: 2rem;
+    width: 2rem;
+  }
 
   .menu-main-navigation-container {
-    position: fixed;
-    right: -100%;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    opacity: .8;
-    transition: right 1s;
+    height: 100%;
 
-    ul {
+    .menu {
+      display: none;
       height: 100%;
-      display: flex;
+      margin: 0;
+      background-color: rgba(0, 0, 0, .7);
+
       flex-direction: column;
-      justify-content: center;
-      text-align: center;
-    }
+      justify-content: space-evenly;
+      align-items: center;
 
-    @media screen and (min-width: 500px) {
-      width: 30em;
-      right: -30em;
+      .menu-item {
+        list-style: none;
 
-      .close-button {
-        margin-top: 1em;
-        margin-right: 1em;
+        a {
+          font-size: 3rem;
+        }
       }
-    }
 
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
-  }
-
-  li {
-    font-size: 2em;
-    font-weight: 700;
-
-    &:hover > a,
-    &.focus > a {
     }
   }
 
-  a {
-    display: block;
-    text-decoration: none;
-  }
-
-}
-
-.menu-toggle {
-  margin-right: 1em;
-  margin-left: 1em;
-  margin-top: 3em;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 500px) {
   .menu-toggle {
-    margin-right: 4em;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+
+  .close-menu {
+    height: 2rem;
+    width: 2rem;
+    display: none;
+    font-size: 1rem;
+    padding-top: .4rem;
   }
 }
 
-.close-button {
-  display: none;
-  cursor: pointer;
-  border: none;
-  background: none;
-  color: #c80000;
-  font-weight: 700;
-  font-size: 2em;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.reveal .menu-main-navigation-container {
-  right: 0;
-}
-
-.reveal .menu-toggle {
-  display: none;
-}
-
-.reveal .close-button {
-  display: block;
+.reveal {
+  .menu-icon {
+    display: none;
+  }
+  .close-menu {
+    display: block;
+  }
+  .main-navigation .menu-main-navigation-container .menu {
+    display: flex;
+  }
 }

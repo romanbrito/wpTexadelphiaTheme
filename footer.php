@@ -14,15 +14,11 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-    <div class="site-info">
-        <!--        new footer-->
-        <section class="bottom">
-            <a href="">Sitemap</a>
-            <a href="">Privacy Policy</a>
-            <p class="copyright">© 2018 Texadelphia Franchising, LLC</p>
-        </section>
-
-    </div><!-- .site-info -->
+    <ul class="menu-footer">
+        <li class="menu-item-footer"><a href="">Sitemap</a></li>
+        <li class="menu-item-footer"><a href="">Privacy Policy</a></li>
+        <li class="menu-item-footer copyright"><a>© 2018 Texadelphia Franchising, LLC</a></li>
+    </ul>
 </footer><!-- #colophon -->
 </div><!-- #page -->
 

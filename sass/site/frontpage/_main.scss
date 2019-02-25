@@ -1,0 +1,20 @@
+.site {
+  //overflow: hidden;
+  display: grid;
+  grid-template-areas: "main";
+  max-width: 1920px;
+  max-height: 2000px;
+  height: 100vh;
+  margin: 0 auto;
+
+  .site-header {
+    grid-area: main;
+  }
+  .site-content {
+    grid-area: main;
+  }
+  .site-footer {
+    grid-area: main;
+  }
+}
+
