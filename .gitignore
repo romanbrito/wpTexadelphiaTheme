@@ -19,6 +19,7 @@
 
 # Constants
 /locations/src/utilities/constants.js
+/react-locations/src/utilities/constants.js
 
 # ide
 .idea
