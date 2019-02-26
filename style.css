@@ -860,7 +860,6 @@ a {
   align-items: center;
   background-color: white;
   z-index: 2;
-  padding: 10%;
   height: 100%;
   max-width: 1200px;
   margin: 0 auto; }
@@ -873,6 +872,8 @@ a {
   z-index: 2;
   font-size: 20px;
   text-align: justify; }
+  .article-container.show-article p {
+    padding: 10%; }
 
 /*--------------------------------------------------------------
 ## Contact us page
