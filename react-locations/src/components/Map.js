@@ -6,22 +6,18 @@ import {MarkerClusterer} from 'react-google-maps/lib/components/addons/MarkerClu
 import {googleMapURL} from '../utilities/constants';
 import {destination} from '../utilities/utilities';
 
+// MapContainer determines the size of the map
 const MapContainer = styled.div`
-  height: 100%;
-  width: 100%;
+  height: 50vh;
 `;
-
+// with height: 100%, vertical height will depend on MapContainer
 const MapElement = styled.div`
   height: 100%;
   `;
 
 const LocContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  
-  @media (min-width: 455px) {
-    width: 50vw;
-    height: 50vh;
+  .logo {
+    max-width: 100%;
   }
 `;
 
@@ -87,6 +83,7 @@ const Map = ({data}) => {
 
   return (
     <LocContainer>
+      <header><img className="logo" src="https://res.cloudinary.com/spottermart/image/upload/v1551288429/Texadelphia/Logo/TexadelphiaLogo.png" alt="Logo"/></header>
       <MapComponent data={data}/>
     </LocContainer>
   )

@@ -4,8 +4,10 @@ import Map from './Map';
 import Search from './Search';
 
 const LocationsContainer = styled.div`
-  width: 100%;
-  height: 100%;
+
+  @media (min-width: 750px) {
+    display: flex;
+  }
 `;
 const JSON_URL = 'https://www.texadelphia.com/wp-content/themes/texsite/json/locations.json';
 
