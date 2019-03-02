@@ -9,6 +9,11 @@ import {destination} from '../utilities/utilities';
 // MapContainer determines the size of the map
 const MapContainer = styled.div`
   height: 50vh;
+  
+  @media (min-width: 750px) {
+    height: 100%;
+    width: 100%;
+  }
 `;
 // with height: 100%, vertical height will depend on MapContainer
 const MapElement = styled.div`
@@ -16,9 +21,8 @@ const MapElement = styled.div`
   `;
 
 const LocContainer = styled.div`
-  .logo {
-    max-width: 100%;
-  }
+  height: 100%;
+  width: 100%;
 `;
 
 const MapComponent = compose(
@@ -83,7 +87,6 @@ const Map = ({data}) => {
 
   return (
     <LocContainer>
-      <header><img className="logo" src="https://res.cloudinary.com/spottermart/image/upload/v1551288429/Texadelphia/Logo/TexadelphiaLogo.png" alt="Logo"/></header>
       <MapComponent data={data}/>
     </LocContainer>
   )

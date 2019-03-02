@@ -1,6 +1,57 @@
 import React, {Component} from 'react';
+import styled from 'styled-components';
+import {MdLocationSearching} from 'react-icons/md'
 import {distanceMatrix} from '../utilities/utilities';
 import Menus from './Menus';
+
+const SearchContainer = styled.div`
+  width: 100%;
+  
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    list-style: none;
+  }
+  .location {
+    line-height: 0;
+    }
+  
+  @media (min-width: 750px) {
+    padding-left: 1%;
+    
+    .search-ui {
+      height: 90%;
+      overflow: auto;
+    }  
+    
+    .location {
+      display: flex;
+    
+    .info-container {
+      flex-grow: 1;
+      flex-basis: 50%;
+      }
+    }
+  }
+
+`;
+
+const InputContainer = styled.div`
+  .big-title {
+    display: none;
+  }
+  
+  @media (min-width: 750px) {
+    height: 10%;
+    .big-title {
+      display: block;
+    }
+  }
+  
+`;
 
 class Search extends Component {
   state = {
@@ -11,10 +62,10 @@ class Search extends Component {
   componentWillMount() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(currentPosition => {
-        const origin = {lat: currentPosition.coords.latitude, lng: currentPosition.coords.longitude};
-        const locations = this.props.data;
-        this.setDistance(origin, locations);
-      },
+          const origin = {lat: currentPosition.coords.latitude, lng: currentPosition.coords.longitude};
+          const locations = this.props.data;
+          this.setDistance(origin, locations);
+        },
         () => console.log('geolocation error'));
     }
   }
@@ -39,17 +90,22 @@ class Search extends Component {
     const reExp = new RegExp(this.state.search, "i")
 
     return (
-      <div className="search-container">
-        <div className="input-container">
-          <input
-            type="text"
-            className="search-input"
-            name="search"
-            placeholder="Name, City, State, Zip Code"
-            value={this.state.search}
-            onChange={e => this.setState({search: e.target.value})}
-          />
-        </div>
+      <SearchContainer>
+        <InputContainer>
+          <header className="big-title">Texadelphia Locations</header>
+          <div className="input-field">
+            <input
+              type="text"
+              className="search-input"
+              name="search"
+              placeholder="Name, City, State, Zip Code"
+              value={this.state.search}
+              onChange={e => this.setState({search: e.target.value})}
+            />
+            <MdLocationSearching/>
+          </div>
+
+        </InputContainer>
         <ul className="search-ui">
           {
             this.state.locations.filter(location =>
@@ -78,7 +134,7 @@ class Search extends Component {
               )
           }
         </ul>
-      </div>
+      </SearchContainer>
     );
   }
 }

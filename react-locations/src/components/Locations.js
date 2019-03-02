@@ -7,6 +7,13 @@ const LocationsContainer = styled.div`
 
   @media (min-width: 750px) {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    // show header only in small screens
+    .small-title {
+      display: none;
+    }
   }
 `;
 const JSON_URL = 'https://www.texadelphia.com/wp-content/themes/texsite/json/locations.json';
@@ -29,6 +36,7 @@ class Locations extends Component{
 
     return (
       <LocationsContainer>
+        <header className="small-title">Texadelphia Locations</header>
         {data ?
           <Map data={data.locations}/> : <p>Loading locations</p>
         }
