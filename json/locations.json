@@ -78,7 +78,7 @@
         "lng": -96.959442
       },
       "houseMenuUrl": ["House_CO-1","House_CO-2"],
-      "cateringMenuUrl": ["Catering_CO"]
+      "cateringMenuUrl": ["Catering_CO-1", "Catering_CO-2"]
     },
     {
       "id": "old-town",
@@ -98,7 +98,7 @@
         "lng": -96.768555
       },
       "houseMenuUrl": ["House_OT-1","House_OT-2"],
-      "cateringMenuUrl": ["Catering_OT"]
+      "cateringMenuUrl": ["Catering_OT-1", "Catering_OT-2"]
     },
     {
       "id": "plano",
