@@ -279,6 +279,26 @@
       },
       "houseMenuUrl": ["House_GV"],
       "cateringMenuUrl": ["Catering_GV"]
+    },
+    {
+      "id": "houston-vintage",
+      "name": "Houston Vintage Park",
+      "address": "126 Vintage Park Blvd. Building D Suite B",
+      "city": "Houston",
+      "state": "TX",
+      "zip": "77070",
+      "phone": "832-843-7048",
+      "hours1": "Sun-Wed 11am - 11pm",
+      "hours2": "Thur 11am - 12pm",
+      "hours3": "Fri-Sat 11am - 1am",
+      "place_id": "",
+      "label": "VP",
+      "coordinates": {
+        "lat": 29.995394,
+        "lng": -95.572148
+      },
+      "houseMenuUrl": ["House_GV"],
+      "cateringMenuUrl": ["Catering_GV"]
     }
   ]
 }
