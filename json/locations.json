@@ -141,26 +141,6 @@
       "cateringMenuUrl": ["Catering_RI"]
     },
     {
-      "id": "arlington-uta-campus",
-      "name": "Arlington/UTA Campus",
-      "address": "445 Spaniolo Dr",
-      "city": "Arlington",
-      "state": "TX",
-      "zip": "76010",
-      "phone": "817-460-0808",
-      "hours1": "Mon-Sun 11am - 10pm",
-      "hours2": "",
-      "hours3": "",
-      "place_id": "",
-      "label": "UTA",
-      "coordinates": {
-        "lat": 32.732301,
-        "lng": -97.108553
-      },
-      "houseMenuUrl": ["House_UTA-1","House_UTA-2"],
-      "cateringMenuUrl": ["Catering_UTA"]
-    },
-    {
       "id": "okc",
       "name": "OKC",
       "address": "200 S Oklahoma Ave #110",
